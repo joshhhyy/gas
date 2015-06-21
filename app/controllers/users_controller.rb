@@ -5,16 +5,19 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @group = Group.find params[:group_id]
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    @group = Group.find params[:group_id]
   end
 
   # GET /users/new
   def new
     @user = User.new
+    @group = Group.find params[:group_id]
   end
 
   # GET /users/1/edit

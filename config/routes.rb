@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
-  root :to => 'groups#index'
+ root :to => 'groups#index'
+ 
+  resources :groups do
+     resources :users do 
+       resources :posts do
+       end
+     end
+   end
 
-  resources :comments
-  resources :posts
-  resources :users
-  resources :groups
-
-
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  delete '/login' => 'session#destroy'
+ 
 end
