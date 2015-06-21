@@ -5,6 +5,11 @@
   <%= @group.name %>
 </p>
 
+<% @users.each do |user| %>
+       <%= user.name %>
+       <%= user.email %>
+       <%= link_to 'Show', [@group, user] %>  <br>
+    <% end %>
 
 
 <%= link_to 'Edit', edit_group_path(@group) %> |
