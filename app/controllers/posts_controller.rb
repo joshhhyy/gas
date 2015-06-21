@@ -14,7 +14,6 @@ class PostsController < ApplicationController
   def show
     @group = Group.find params[:group_id]
     @user = User.find params[:user_id]
-
   end
 
   # GET /posts/new
@@ -84,6 +83,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :subtitle, :content, :tags, :created_at, :updated_at)
+      params.require(:post).permit(:title, :subtitle, :content, :tags, :created_at, :updated_at, :user_id)
     end
 end
