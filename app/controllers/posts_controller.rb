@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def index
     @group = Group.find params[:group_id]
     @user = User.find params[:user_id]
-    @posts = Post.all
+    @posts = @user.posts
   end
 
   # GET /posts/1
@@ -71,7 +71,7 @@ class PostsController < ApplicationController
     @user = User.find params[:user_id]
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to group_user_posts_path, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
