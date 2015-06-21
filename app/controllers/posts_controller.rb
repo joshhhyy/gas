@@ -4,31 +4,42 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    @group = Group.find params[:group_id]
+    @user = User.find params[:user_id]
     @posts = Post.all
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @group = Group.find params[:group_id]
+    @user = User.find params[:user_id]
+
   end
 
   # GET /posts/new
   def new
+    @group = Group.find params[:group_id]
+    @user = User.find params[:user_id]
     @post = Post.new
   end
 
   # GET /posts/1/edit
   def edit
+    @group = Group.find params[:group_id]
+    @user = User.find params[:user_id]
   end
 
   # POST /posts
   # POST /posts.json
   def create
+    @group = Group.find params[:group_id]
+    @user = User.find params[:user_id]
     @post = Post.new(post_params)
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html { redirect_to [@group, @user, @post], notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -40,9 +51,11 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+    @group = Group.find params[:group_id]
+    @user = User.find params[:user_id]
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.html { redirect_to [@group, @user, @post], notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
@@ -54,6 +67,8 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    @group = Group.find params[:group_id]
+    @user = User.find params[:user_id]
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
