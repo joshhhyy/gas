@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   def index
     @group = Group.find params[:group_id]
     @users = User.all
-    @group = Group.find params[:group_id]
   end
 
   # GET /users/1
