@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def index
     @group = Group.find params[:group_id]
     @user = User.find params[:user_id]
-    @posts = Post.all
+    @posts = Post.find params[:user_id]
   end
 
   # GET /posts/1
