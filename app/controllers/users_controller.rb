@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @group = Group.find params[:group_id]
+    # @post = Post.find params[:post_id]
   end
 
   # GET /users/new
