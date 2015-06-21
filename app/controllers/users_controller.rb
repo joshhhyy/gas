@@ -4,31 +4,36 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    @group = Group.find params[:group_id]
     @users = User.all
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    @group = Group.find params[:group_id]
   end
 
   # GET /users/new
   def new
+    @group = Group.find params[:group_id]
     @user = User.new
   end
 
   # GET /users/1/edit
   def edit
+    @group = Group.find params[:group_id]
   end
 
   # POST /users
   # POST /users.json
   def create
+    @group = Group.find params[:group_id]
     @user = User.new(user_params)
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to [@group, @user], notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -40,9 +45,10 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    @group = Group.find params[:group_id]
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to [@group, @user], notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -54,6 +60,7 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
+    @group = Group.find params[:group_id]
     @user.destroy
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
@@ -69,6 +76,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :avatar, :last_active, :alumni, :admin)
+      params.require(:user).permit(:name, :email, :avatar, :last_active, :alumni, :admin, :password, :password_confirmation)
     end
 end
