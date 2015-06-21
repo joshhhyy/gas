@@ -21,3 +21,28 @@
  *= require_self
  *= require bootstrap-select
  */
+
+
+.backgroundContainer {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  width: 2000px;
+  height: 2000px;
+  z-index: 1;
+  display: block;
+  background-image: image-url('background-default.jpg');
+  -webkit-filter: blur(6px) grayscale(70%) opacity(20%); 
+  -moz-filter: blur(6px) grayscale(70%) opacity(20%); 
+  -o-filter: blur(6px) grayscale(70%) opacity(20%); 
+  -ms-filter: blur(6px) grayscale(70%) opacity(20%);  
+  -webkit-filter: blur(6px) grayscale(70%) opacity(20%); 
+  filter: blur(6px) grayscale(70%) opacity(20%); 
+}
+
+.contentContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
