@@ -4,10 +4,13 @@
   <strong><%= @group.name %></strong>
 </p>
 
-<% @users.each do |user| %>
-  <%= link_to user.name, [@group, user] %>
+<% @users.each do |user| %> 
+  <%= user.name %> <br>
+  <%= link_to "Profile", [@group, user] %> |
+  <%= link_to "Blog", group_user_posts_path(@group, user) %><br>
   <%= user.email %>
-         <br>
+
+         <hr>
 <% end %>
 
 <%= link_to 'New User', new_group_user_path(@group) %> |
