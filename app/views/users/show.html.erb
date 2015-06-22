@@ -12,7 +12,11 @@
 
 <p>
   <strong>Avatar:</strong>
-  <%= @user.avatar %>
+  <% if @user.avatar == "" %>
+    <img src="/assets/avatar-default.png">
+  <% else %>
+    <img src=<%= @user.avatar %>>
+  <% end %>
 </p>
 
 <p>
@@ -25,8 +29,21 @@
   <%= @user.alumni %>
 </p>
 
+<div class="social">
+  <div class="github">
+  </div>
+  <div class="linkedin">
+  </div>
+  <div class="twitter">
+  </div>
+  <div class="slack">
+  </div>
+</div>
 
 
-<%= link_to 'Show Posts', group_user_posts_path(@group, @user, @post) %> |
-<%= link_to 'Edit', edit_group_user_path(@group, @user) %> |
-<%= link_to 'Back', group_path(@group) %>
+
+<%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> |
+<%= link_to 'Back', group_path(@group) %> |
+<% if @user === @current_user %>
+  <%= link_to 'Edit', edit_group_user_path(@group, @user) %> 
+<% end %>
