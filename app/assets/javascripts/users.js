@@ -6,7 +6,7 @@ var username;
 var userCommits = [];
 var allCommits;
 
-$(document).ready(function() {
+$(".users.show").ready(function() {
 
 // GITHUB API SCRIPT 
 
