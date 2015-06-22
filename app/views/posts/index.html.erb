@@ -1,36 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Posts</h1>
+<h1><%= @user.name %>'s Blog</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Subtitle</th>
-      <th>Content</th>
-      <th>Tags</th>
-      <th>Created at</th>
-      <th>Updated at</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.subtitle %></td>
-        <td><%= post.content %></td>
-        <td><%= post.tags %></td>
-        <td><%= post.created_at %></td>
-        <td><%= post.updated_at %></td>
-        <td><%= link_to 'Show', [@group, @user, post] %></td>
-        <td><%= link_to 'Edit', edit_group_user_post_path(@group, @user, post) %></td>
-        <td><%= link_to 'Destroy', [@group, @user, post], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="postbox">
+       <h3><%= link_to post.title.capitalize, [@group, @user, post] %> - <%= post.subtitle.capitalize %></h3>
+       <p>"<%= post.content %>"</p>
+       <p>Tags: <%= post.tags %></p>
+
+        <% if post.created_at == post.updated_at %>
+          <p>Created at: <%= post.created_at %></p>
+
+        <% else %>
+          <p>Created at: <%= post.created_at %></p>
+          <p>Updated at: <%= post.updated_at %></p>
+        <% end %>
+        
+       <%= link_to 'Edit', edit_group_user_post_path(@group, @user, post) %>
+       <%= link_to 'Destroy', [@group, @user, post], method: :delete, data: { confirm: 'Are you sure?' } %>
+
+      </div>
     <% end %>
-  </tbody>
-</table>
 
 <br>
 <% if @current_user.present? %>
