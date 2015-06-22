@@ -43,6 +43,10 @@
     <%= f.label :admin %><br>
     <%= f.check_box :admin %>
   </div>
+  <div class="field">
+    <%= f.label :group_id %>
+    <%= f.select :group_id, Group.all.map {|group|[group.name, group.id]}, :include_blank => true %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

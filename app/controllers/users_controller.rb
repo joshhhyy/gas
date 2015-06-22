@@ -31,7 +31,7 @@ class UsersController < ApplicationController
   def create
     @group = Group.find params[:group_id]
     @user = User.new(user_params)
-
+    
     respond_to do |format|
       if @user.save
         format.html { redirect_to [@group, @user], notice: 'User was successfully created.' }
@@ -77,6 +77,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :avatar, :last_active, :alumni, :admin, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :avatar, :last_active, :alumni, :admin, :password, :password_confirmation, :group_id)
     end
 end
