@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Posts</h1>
+<h1><%= @user.name %>'s Blog</h1>
 
 <table>
   <thead>
@@ -18,13 +18,12 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.title %></td>
+        <td><%= link_to post.title, [@group, @user, post] %></td>
         <td><%= post.subtitle %></td>
         <td><%= post.content %></td>
         <td><%= post.tags %></td>
         <td><%= post.created_at %></td>
         <td><%= post.updated_at %></td>
-        <td><%= link_to 'Show', [@group, @user, post] %></td>
         <td><%= link_to 'Edit', edit_group_user_post_path(@group, @user, post) %></td>
         <td><%= link_to 'Destroy', [@group, @user, post], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
