@@ -19,7 +19,6 @@ class UsersController < ApplicationController
   def new
     @group = Group.find params[:group_id]
     @user = User.new
-    @group = Group.find params[:group_id]
   end
 
   # GET /users/1/edit
