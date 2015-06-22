@@ -10,7 +10,7 @@ $(".users.show").ready(function() {
 
 // GITHUB API SCRIPT 
 
-  var getRepos = function() {
+  var getGithubRepos = function() {
     $.getJSON(reposUrl, {
     }).done(function (results) {
       $('<p>Github Username: ' + username + '</p>').prependTo('.github');
@@ -38,7 +38,7 @@ $(".users.show").ready(function() {
     });
   };
 
-  var getUser = function() {
+  var getGithubUser = function() {
 
     var email = gon.user.email
     var gitUrl = "https://api.github.com/search/users"
@@ -56,14 +56,16 @@ $(".users.show").ready(function() {
         reposUrl = results.items[0].repos_url;
         var githubAvatar = $('<img>').addClass('githubAvatar').attr('src', githubAvatarUrl);
         $(githubAvatar).prependTo('.github');
-        getRepos();
+        getGithubRepos();
       }
     })
   }
 
+ 
 
   // API FUNCTION CALLS
-  getUser();
+  getGithubUser();
+
 
 
 });
