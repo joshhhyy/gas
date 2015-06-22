@@ -25,7 +25,9 @@
 
 <br>
 
-<% if @current_user.id == @user.id %>
-  <%= link_to 'New Post', new_group_user_post_path %> |
+<% if @current_user %>
+  <% if @current_user.id == @user.id %>
+    <%= link_to 'New Post', new_group_user_post_path %> |
+  <% end %>
 <% end %>
 <%= link_to 'Back', [@group, @user] %>
