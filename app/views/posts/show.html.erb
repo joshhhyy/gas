@@ -22,7 +22,7 @@
 
 <p>
   <strong>Created at:</strong>
-  <%= @post.created_at %>
+  <%= @post.created_at.strftime "%b %d, %Y" %>
 </p>
 
 <p>
@@ -31,7 +31,7 @@
 </p>
 
 <p>
-<%= cl_image_tag(@post.cl_id) %>  
+<%= cl_image_tag(@post.cl_id, :width => 500, :crop => :scale) %>  
 </p>
 
 <%= link_to 'Edit', edit_group_user_post_path(@group, @user, @post) %> |
