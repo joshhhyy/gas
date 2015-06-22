@@ -5,12 +5,11 @@
 </p>
 
 <% @users.each do |user| %> 
-  <%= user.name %> <br>
+  <%= user.name.capitalize %> <br>
   <%= link_to "Profile", [@group, user] %> |
   <%= link_to "Blog", group_user_posts_path(@group, user) %><br>
-  <%= user.email %>
-
-         <hr>
+  <%= user.email %> 
+  <hr>
 <% end %>
 
 <%= link_to 'New User', new_group_user_path(@group) %> |

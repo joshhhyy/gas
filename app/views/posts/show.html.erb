@@ -30,6 +30,9 @@
   <%= @post.updated_at %>
 </p>
 
+<p>
+  <%= cl_image_tag(@post.cl_id) %>
+</p>
 
 <%= link_to 'Edit', edit_group_user_post_path(@group, @user, @post) %> |
 <%= link_to 'Back', group_user_posts_path %>
