@@ -18,12 +18,13 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%=link_to user.name, [@group, user] %></td>
+        <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= user.avatar %></td>
         <td><%= user.last_active %></td>
         <td><%= user.alumni %></td>
         <td><%= user.admin %></td>
+        <td><%= link_to 'Show', [@group, user] %></td>
         <td><%= link_to 'Edit', edit_group_user_path( @group, user ) %></td>
         <td><%= link_to 'Destroy', [@group, user], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
