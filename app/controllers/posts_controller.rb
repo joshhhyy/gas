@@ -12,6 +12,9 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @post = Post.find params[:id]
+    @comment = Comment.new
+    @comments = @post.comments
     @group = Group.find params[:group_id]
     @user = User.find params[:user_id]
   end
@@ -62,7 +65,7 @@ class PostsController < ApplicationController
     end
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to [@group, @user, @post], notice: 'Post was successfully updated.' }
+        format.html { redirect_to group_user_posts_path, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
