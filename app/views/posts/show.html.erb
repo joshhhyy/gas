@@ -25,11 +25,15 @@
 <p>
   <%= cl_image_tag(@post.cl_id) %>
 </p>
+<hr>
 <div class="comments">
+  <strong> <%= 'Comments' %></strong><br>
   <% @comments.each do |comment| %>
-      <%= comment.content %>
+     <%= User.find(comment.user_id).name %>:
+      <%= comment.content %> <br>
   <% end %>
 </div>
+<hr>
 <div class="comment">
   <%= render :partial => 'comments/form' %> 
 </div>
