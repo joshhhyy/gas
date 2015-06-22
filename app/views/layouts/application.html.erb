@@ -13,13 +13,15 @@
 
   <div class="nav">
     <%= link_to 'GA Students Blog', root_path %>
-    <%= link_to 'Login', login_path %>
     <% if @current_user.present? %>
-    <%= @current_user.name %>
-    <%= link_to("Log out #{@current_user.name}", login_path, :method => :delete) %>
+      <%= link_to @current_user.name, group_user_path(@current_user.group_id, @current_user) %>
+      <%= link_to("Log out #{@current_user.name}", login_path, :method => :delete) %>
+      <%= link_to 'New Post', new_group_user_post_path(@current_user.group_id, @current_user.id) %>
+    <% else %>
+      <%= link_to 'Login', login_path %>
     <% end %>
   </div>
-  
+
 <%= yield %>
 
   </div>
