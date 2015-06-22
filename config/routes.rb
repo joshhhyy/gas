@@ -33,14 +33,16 @@
 
 Rails.application.routes.draw do
 
- root :to => 'groups#index'
- 
+  root :to => 'groups#index'
+
   resources :groups do
-     resources :users do 
-       resources :posts do
-       end
-     end
-   end
+    resources :users do 
+      resources :posts do
+        resources :comments do
+        end   
+      end
+    end
+  end
 
 
   get '/login' => 'session#new'
