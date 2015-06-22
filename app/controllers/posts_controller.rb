@@ -36,6 +36,10 @@ class PostsController < ApplicationController
     @user = User.find params[:user_id]
     @post = Post.new(post_params)
     @post.user_id = @current_user.id
+    if params[:post]['file'].present?
+      cloudinary = Cloudinary::Uploader.upload(params[:post]['file'].path)
+      @post.cl_id = cloudinary['public_id']
+    end
     respond_to do |format|
       if @post.save
         format.html { redirect_to [@group, @user, @post], notice: 'Post was successfully created.' }
@@ -52,6 +56,10 @@ class PostsController < ApplicationController
   def update
     @group = Group.find params[:group_id]
     @user = User.find params[:user_id]
+    if params[:post]['file'].present?
+      cloudinary = Cloudinary::Uploader.upload(params[:post]['file'].path)
+      @post.cl_id = cloudinary['public_id']
+    end
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to [@group, @user, @post], notice: 'Post was successfully updated.' }
@@ -83,6 +91,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :subtitle, :content, :tags, :created_at, :updated_at, :user_id)
+      params.require(:post).permit(:title, :subtitle, :content, :tags, :created_at, :updated_at, :user_id, :cl_id)
     end
 end

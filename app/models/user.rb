@@ -12,6 +12,7 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  password_digest :string
+#  group_id        :integer
 #
 
 class User < ActiveRecord::Base
