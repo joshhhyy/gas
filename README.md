@@ -157,7 +157,7 @@ Responsive (but not mobile-first);
 - Add Github repo link in footer
 - Add Contact link in footer
 
-###Group Show View
+###Group Show View - Josh
 - Remove "Back" link
 - Remove "New user"
 - "Edit" - admin only
@@ -170,7 +170,7 @@ Responsive (but not mobile-first);
 ###User model
 - Add tagline field (string)
 
-###User Show View
+###User Show View - Josh
 - Add tagline
 - Last active - should be when user last logged in
 - Remove "Alumni" 
@@ -180,12 +180,12 @@ Responsive (but not mobile-first);
 --GitHub (fix up)
 --Twitter
 
-###New User View
+###New User View - Josh
 - Remove "Last Active"
 - Remove "Alumni"
 - Remove "Admin"
 
-###Posts Index View
+###Posts Index View - Josh
 - Truncate post.content (to ~100 characters)
 - Add <hr> tags between posts
 - Move subtitle to appear on line below title
