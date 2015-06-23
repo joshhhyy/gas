@@ -129,10 +129,10 @@ Responsive (but not mobile-first);
 
 ##Backlog
 
-###Tagcloud
+###Tagcloud (nice to have)
 - Make it.
 
-###Intellinav - Add "Sign up" (new user) <- Alfie
+~~###Intellinav - Add "Sign up" (new user) <- Alfie~~
 
 ###Group Index View <- Alfie
 - "Destroy" - admin only
@@ -151,13 +151,13 @@ Responsive (but not mobile-first);
 - Add number of users in group
 - Add instructor name
 
-###Homepage 
+###Homepage (low priority)
 - Create footer
 - Add GA logo and link in footer
 - Add Github repo link in footer
 - Add Contact link in footer
 
-###Group Show View
+###Group Show View <- Josh
 - Remove "Back" link
 - Remove "New user"
 - "Edit" - admin only
@@ -167,47 +167,46 @@ Responsive (but not mobile-first);
 - Add user avatar
 - Remove user email address
 
-###User model
-- Add tagline field (string)
+~~###User model <- Chris~~
+~~Add tagline field (string)~~
 
-###User Show View
+###User Show View <- Josh
 - Add tagline
 - Last active - should be when user last logged in
 - Remove "Alumni" 
 - Move "View Profile" and "View Blog" up next to name
 - APIs
--- Slack
---GitHub (fix up)
---Twitter
+..* Slack
+..* GitHub (fix up) (CHRIS: Josh, don't worry about the GitHub part of it, I'll do it)
+..* Twitter
 
-###New User View
+###New User View <- Josh
 - Remove "Last Active"
 - Remove "Alumni"
 - Remove "Admin"
 
-###Posts Index View
+###Posts Index View <- Josh
 - Truncate post.content (to ~100 characters)
-- Add <hr> tags between posts
+- Add hr tags between posts
 - Move subtitle to appear on line below title
 
-###Post New View
+###Post New View <- Chris
 - Mandatory fields - title, content
 - Fix RTE style (formatting buttons)
-- Move "New Post" up top
-- Remove "Back"
+~~- Remove "Back"~~
 
-###Post Show View
-- Remove back
-- Move 'Edit' up top
-- Add commenter's avatar
-- Add comment date (created_at)
+~~###Post Show View <- Chris~~
+~~- Remove back~~
+~~- Move 'Edit' up top~~
+~~- Add commenter's avatar~~
+~~- Add comment date (created_at)~~
 
 ###Time and date throughout application
 - Strftime
 - local (or at least Sydney) time
 
-###Post Edit
-- Change "Show" to "Cancel"
+~~###Post Edit <- Chris~~
+~~- Change "Show" to "Cancel"~~
 
 ###Notes
 

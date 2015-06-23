@@ -41,6 +41,7 @@ $(".users.show").ready(function() {
 
     var email = gon.user.email
     var gitUrl = "https://api.github.com/search/users"
+    debugger;
 
     $.getJSON(gitUrl, {
       q: email,

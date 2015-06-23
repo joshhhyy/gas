@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20150623071827) do
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
     t.integer  "group_id"
+    t.string   "tagline"
   end
 
 end
