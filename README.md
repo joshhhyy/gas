@@ -167,8 +167,8 @@ Responsive (but not mobile-first);
 - Add user avatar
 - Remove user email address
 
-###User model <- Chris
-- Add tagline field (string)
+~~###User model <- Chris~~
+~~Add tagline field (string)~~
 
 ###User Show View <- Josh
 - Add tagline
