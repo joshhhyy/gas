@@ -23,6 +23,7 @@ class User < ActiveRecord::Base
   validates :email, :uniqueness => true
 
   def self.search(search)
+    search = '%' + search + '%'
     User.where( [
       "name ILIKE :query or
        email ILIKE :query
@@ -31,4 +32,3 @@ class User < ActiveRecord::Base
     ] )
   end
 end
-
