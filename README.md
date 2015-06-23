@@ -206,6 +206,9 @@ Responsive (but not mobile-first);
 - Strftime
 - local (or at least Sydney) time
 
+###Post Edit
+- Change "Show" to "Cancel"
+
 ###Notes
 
 Name: 
