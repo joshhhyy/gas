@@ -18,6 +18,7 @@
 //= require bootstrap-wysihtml5
 //= require_tree .
 
+
 hljs.initHighlightingOnLoad();
 
 $(document).ready(function() {
