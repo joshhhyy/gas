@@ -54,6 +54,8 @@ GEM
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
     bootstrap-select-rails (1.6.3)
+    bootstrap-wysihtml5-rails (0.3.3.7)
+      railties (>= 3.0)
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
@@ -196,6 +198,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass (~> 3.3.4)
   bootstrap-select-rails
+  bootstrap-wysihtml5-rails
   byebug
   coffee-rails (~> 4.1.0)
   font-awesome-sass

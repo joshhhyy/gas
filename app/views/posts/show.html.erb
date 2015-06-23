@@ -10,9 +10,7 @@
   <%= @post.subtitle %>
 </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
+<p class="parseMe">
 </p>
 
 <p>
@@ -30,9 +28,6 @@
   <%= @post.updated_at %>
 </p>
 
-<p>
-  <%= cl_image_tag(@post.cl_id) %>
-</p>
 <hr>
 <div class="comments">
   <strong> <%= 'Comments' %></strong><br>
