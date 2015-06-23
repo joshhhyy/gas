@@ -14,28 +14,36 @@
 //= require jquery_ujs
 //= require highlight_js/highlight
 //= require highlight_js/languages/ruby
-//= require_tree .
-
-
-hljs.initHighlightingOnLoad();
 //= require jquery-readyselector
 //= require bootstrap-wysihtml5
 //= require_tree .
+
+hljs.initHighlightingOnLoad();
+
   $(document).ready(function(){
     $('.wysihtml5').each(function(i, elem) {
       $(elem).wysihtml5();
-    });
+    });  
+  
+      $(".posts.show").ready(function() {
 
-  var parseText = function() {
-    var parseMe = $(".parseMe");
-    stringToParse = gon.postContent;
-    html = $.parseHTML(stringToParse)
-    console.log(html)
+    console.log("Ready")
 
-    $('.parseMe').append( html );
+    var parseText = function() {
+      var parseMe = $(".parseMe");
+      stringToParse = gon.postContent;
+      html = $.parseHTML(stringToParse)
+      console.log(html)
 
-  }
+      $('.parseMe').append( html );
 
-parseText();
+    };
+    parseText();
+  });
+
+
 
   })
+
+
+

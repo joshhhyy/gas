@@ -24,14 +24,8 @@
         <td><%= user.last_active %></td>
         <td><%= user.alumni %></td>
         <td><%= user.admin %></td>
-        <td><%= link_to 'Show', [@group, user] %></td>
-        <td><%= link_to 'Edit', edit_group_user_path( @group, user ) %></td>
-        <td><%= link_to 'Destroy', [@group, user], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New User', new_group_user_path %>

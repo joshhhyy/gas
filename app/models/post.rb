@@ -16,4 +16,17 @@
 class Post < ActiveRecord::Base
   belongs_to :user
   has_many :comments
+
+
+  def self.search(search)
+    Post.where( [
+      "title ILIKE :query or
+       content ILIKE :query or
+       tags ILIKE :query or
+       subtitle ILIKE :query
+      ",
+      { :query => search }
+    ] )
+  end
+
 end

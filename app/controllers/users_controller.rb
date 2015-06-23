@@ -5,7 +5,16 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @group = Group.find params[:group_id]
-    @users = User.all
+   if params[:search_users]
+    @users = User.search(params[:search_users]).order("created_at DESC")
+   else
+    @users = User.all.order('created_at DESC')
+   end
+  end
+
+  def search 
+    @users = User.search( params[:search_users] )
+    render :index
   end
 
   # GET /users/1

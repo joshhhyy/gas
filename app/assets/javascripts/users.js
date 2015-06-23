@@ -1,4 +1,3 @@
-
 // GitHub API variable defaults
 var reposUrl; 
 var repoIDs = [];
