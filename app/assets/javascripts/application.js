@@ -18,6 +18,7 @@
 //= require bootstrap-wysihtml5
 //= require_tree .
 
+
 hljs.initHighlightingOnLoad();
 
 $(document).ready(function() {
@@ -40,4 +41,14 @@ $(document).ready(function() {
     parseTextShow();
   });
 
+<<<<<<< HEAD
+
+
+
+  })
+
+
+
+=======
 })
+>>>>>>> fdc50698ace7cf0edccda1c104d686afb0b535f5
