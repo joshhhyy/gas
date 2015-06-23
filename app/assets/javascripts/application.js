@@ -25,7 +25,7 @@ hljs.initHighlightingOnLoad();
       $(elem).wysihtml5();
     });  
   
-      $(".posts.show").ready(function() {
+  $(".posts.show").ready(function() {
 
     console.log("Ready")
 
@@ -40,6 +40,7 @@ hljs.initHighlightingOnLoad();
     };
     parseText();
   });
+
 
 
 
