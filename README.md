@@ -1,6 +1,6 @@
-### GA Student Blog
+# GA Student Blog
 
-#Idea
+###Idea
 
 A blog site for GA students and alumni to: 
 
@@ -8,7 +8,7 @@ Post about their progress and experiences during the course;
 Post about their experiences finding and working a job after the course (for the benefit of recent alumni and future students);
 Find each others’ social/professional sites (GitHub, LinkedIn, Twitter, Facebook (lol).
 
-#Who is it for?
+###Who is it for?
 
 Phase 1: GA Sydney WDI students (intake WDI-10 onwards);
 
@@ -23,7 +23,7 @@ Problem 2: Students don’t have a central location to find out their classmates
 
 Problem 3: Current students don’t necessarily know what to expect from the course or what to expect once they finish the course. The blog will allow students to see what alumni have done since finishing the course, and allow alumni to see what current students are up to.
 
-#Models
+###Models
 
 Locations:
 - eg “Sydney”
@@ -38,14 +38,14 @@ Associations:
 - has_many Classes
 - belongs_to Location
 
-#Classes
+###Classes
 - eg “WDI-10”
 
 Associations:
 - has_many Users
 - belongs_to Stream
 
-#Users
+###Users
 eg “Josh”
 
 Associations:
@@ -53,21 +53,21 @@ Associations:
 - has_many Posts through Blog
 - belongs_to Class
 
-#Blogs
+###Blogs
 Associations:
 - has_many Posts
 - belongs_to User
 
-#Posts
+###Posts
 Associations:
 - has_many Comments
 - belongs_to Blog
 
-#Comments
+###Comments
 Associations:
 - belongs_to Post
 
-#Features
+###Features
 
 Post;
 Rich text;
