@@ -180,10 +180,11 @@ Responsive (but not mobile-first);
 ..* GitHub (fix up) (CHRIS: Josh, don't worry about the GitHub part of it, I'll do it)
 ..* Twitter
 
-###New User View <- Josh
-- Remove "Last Active"
-- Remove "Alumni"
-- Remove "Admin"
+~~###New User View <- Josh~~
+~~- Remove "Last Active"~~
+~~- Remove "Alumni"~~
+~~- Remove "Admin"~~
+~~- Add field required validators~~
 
 ###Posts Index View <- Josh
 - Truncate post.content (to ~100 characters)
@@ -207,6 +208,12 @@ Responsive (but not mobile-first);
 
 ~~###Post Edit <- Chris~~
 ~~- Change "Show" to "Cancel"~~
+
+###Auto-login on sign-up
+- When a new user signs up, they should be signed in with those credentials
+
+###Password reset
+- Reset password using email address
 
 ###Notes
 
