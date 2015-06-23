@@ -193,8 +193,7 @@ Responsive (but not mobile-first);
 ###Post New View <- Chris
 - Mandatory fields - title, content
 - Fix RTE style (formatting buttons)
-- Move "New Post" up top
-- Remove "Back"
+~~- Remove "Back"~~
 
 ~~###Post Show View <- Chris~~
 ~~- Remove back~~
@@ -206,8 +205,8 @@ Responsive (but not mobile-first);
 - Strftime
 - local (or at least Sydney) time
 
-###Post Edit <- Chris
-- Change "Show" to "Cancel"
+~~###Post Edit <- Chris~~
+~~- Change "Show" to "Cancel"~~
 
 ###Notes
 
