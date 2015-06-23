@@ -19,6 +19,7 @@ class PostsController < ApplicationController
   def search
     @posts = Post.search( params[:search_posts] )
     render :search_page
+    # raise params.inspect
   end
 
 
@@ -109,6 +110,8 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :subtitle, :content, :tags, :created_at, :updated_at, :user_id, :cl_id, :id)
+
+      params.require(:post).permit(:title, :subtitle, :content, :tags, :created_at, :updated_at, :user_id, :cl_id, :search_post)
+
     end
 end
