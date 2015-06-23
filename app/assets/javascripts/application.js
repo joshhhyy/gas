@@ -16,6 +16,8 @@
 //= require highlight_js/languages/ruby
 //= require jquery-readyselector
 //= require bootstrap-wysihtml5
+//= require bootstrap-sprockets
+//= require bootstrap-select
 //= require_tree .
 
 
@@ -41,14 +43,5 @@ $(document).ready(function() {
     parseTextShow();
   });
 
-<<<<<<< HEAD
-
-
-
-  })
-
-
-
-=======
 })
->>>>>>> fdc50698ace7cf0edccda1c104d686afb0b535f5
+
