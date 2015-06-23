@@ -19,6 +19,7 @@ class Post < ActiveRecord::Base
 
 
   def self.search(search)
+    search = '%' + search + '%'
     Post.where( [
       "title ILIKE :query or
        content ILIKE :query or
@@ -30,3 +31,4 @@ class Post < ActiveRecord::Base
   end
 
 end
+
