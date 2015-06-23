@@ -209,6 +209,9 @@ Responsive (but not mobile-first);
 ~~###Post Edit <- Chris~~
 ~~- Change "Show" to "Cancel"~~
 
+###Auto-login on sign-up
+- When a new user signs up, they should be signed in with those credentials
+
 ###Notes
 
 Name: 
