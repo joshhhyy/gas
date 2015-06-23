@@ -1,18 +1,18 @@
-console.log("Yes");
+$(document).ready(function()  {
+  console.log("posts javascript");  
+  $(".posts.show").ready(function() {
 
-$(".posts.show").ready(function() {
+    console.log("Ready")
 
-  console.log("Ready")
+    var parseText = function() {
+    var parseMe = $(".parseMe");
+    stringToParse = gon.postContent;
+    html = $.parseHTML(stringToParse)
+    console.log(html)
 
-  var parseText = function() {
-  var parseMe = $(".parseMe");
-  stringToParse = gon.postContent;
-  html = $.parseHTML(stringToParse)
-  console.log(html)
+    $('.parseMe').append( html );
 
-  $('.parseMe').append( html );
-
+    };
+    parseText();
   };
-
-  parseText();
-}
+)}
