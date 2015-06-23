@@ -8,9 +8,6 @@
       <th>Name</th>
       <th>Email</th>
       <th>Avatar</th>
-      <th>Last active</th>
-      <th>Alumni</th>
-      <th>Admin</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,12 +15,14 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.avatar %></td>
-        <td><%= user.last_active %></td>
-        <td><%= user.alumni %></td>
-        <td><%= user.admin %></td>
+        <td><%= user.name %> | </td>
+        <td><%= user.email %> | </td> 
+        <td><% if user.avatar == "" %>
+              <img src="/assets/avatar-default.png">
+            <% else %>
+              <img src=<%= user.avatar %>>
+            <% end %> | </td>  
+        <td><%= link_to 'View Profile', group_user_path(User.find(user.id).group_id, User.find(user.id)) %> | </td>
       </tr>
     <% end %>
   </tbody>
