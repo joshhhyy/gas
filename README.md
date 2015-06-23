@@ -187,14 +187,13 @@ Responsive (but not mobile-first);
 
 ###Posts Index View <- Josh
 - Truncate post.content (to ~100 characters)
-- Add <hr> tags between posts
+- Add hr tags between posts
 - Move subtitle to appear on line below title
 
 ###Post New View <- Chris
 - Mandatory fields - title, content
 - Fix RTE style (formatting buttons)
-- Move "New Post" up top
-- Remove "Back"
+~~- Remove "Back"~~
 
 ~~###Post Show View <- Chris~~
 ~~- Remove back~~
@@ -206,8 +205,8 @@ Responsive (but not mobile-first);
 - Strftime
 - local (or at least Sydney) time
 
-###Post Edit <- Chris
-- Change "Show" to "Cancel"
+~~###Post Edit <- Chris~~
+~~- Change "Show" to "Cancel"~~
 
 ###Notes
 
