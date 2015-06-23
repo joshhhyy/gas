@@ -132,7 +132,7 @@ Responsive (but not mobile-first);
 ###Tagcloud (nice to have)
 - Make it.
 
-###Intellinav - Add "Sign up" (new user) <- Alfie
+~~###Intellinav - Add "Sign up" (new user) <- Alfie~~
 
 ###Group Index View <- Alfie
 - "Destroy" - admin only
@@ -167,8 +167,8 @@ Responsive (but not mobile-first);
 - Add user avatar
 - Remove user email address
 
-###User model <- Chris
-- Add tagline field (string)
+~~###User model <- Chris~~
+~~Add tagline field (string)~~
 
 ###User Show View <- Josh
 - Add tagline
@@ -176,9 +176,9 @@ Responsive (but not mobile-first);
 - Remove "Alumni" 
 - Move "View Profile" and "View Blog" up next to name
 - APIs
--- Slack
---GitHub (fix up) (CHRIS: Josh, don't worry about the GitHub part of it, I'll do it)
---Twitter
+..* Slack
+..* GitHub (fix up) (CHRIS: Josh, don't worry about the GitHub part of it, I'll do it)
+..* Twitter
 
 ###New User View <- Josh
 - Remove "Last Active"
@@ -196,11 +196,11 @@ Responsive (but not mobile-first);
 - Move "New Post" up top
 - Remove "Back"
 
-###Post Show View <- Chris
-- Remove back
-- Move 'Edit' up top
-- Add commenter's avatar
-- Add comment date (created_at)
+~~###Post Show View <- Chris~~
+~~- Remove back~~
+~~- Move 'Edit' up top~~
+~~- Add commenter's avatar~~
+~~- Add comment date (created_at)~~
 
 ###Time and date throughout application
 - Strftime
