@@ -18,3 +18,24 @@
 
 
 hljs.initHighlightingOnLoad();
+//= require jquery-readyselector
+//= require bootstrap-wysihtml5
+//= require_tree .
+  $(document).ready(function(){
+    $('.wysihtml5').each(function(i, elem) {
+      $(elem).wysihtml5();
+    });
+
+  var parseText = function() {
+    var parseMe = $(".parseMe");
+    stringToParse = gon.postContent;
+    html = $.parseHTML(stringToParse)
+    console.log(html)
+
+    $('.parseMe').append( html );
+
+  }
+
+parseText();
+
+  })
