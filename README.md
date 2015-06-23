@@ -187,7 +187,7 @@ Responsive (but not mobile-first);
 
 ###Posts Index View <- Josh
 - Truncate post.content (to ~100 characters)
-- Add <hr> tags between posts
+- Add hr tags between posts
 - Move subtitle to appear on line below title
 
 ###Post New View <- Chris
