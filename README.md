@@ -129,7 +129,7 @@ Responsive (but not mobile-first);
 
 ##Backlog
 
-###Tagcloud
+###Tagcloud (nice to have)
 - Make it.
 
 ###Intellinav - Add "Sign up" (new user) <- Alfie
@@ -151,13 +151,13 @@ Responsive (but not mobile-first);
 - Add number of users in group
 - Add instructor name
 
-###Homepage 
+###Homepage (low priority)
 - Create footer
 - Add GA logo and link in footer
 - Add Github repo link in footer
 - Add Contact link in footer
 
-###Group Show View - Josh
+###Group Show View <- Josh
 - Remove "Back" link
 - Remove "New user"
 - "Edit" - admin only
@@ -167,36 +167,36 @@ Responsive (but not mobile-first);
 - Add user avatar
 - Remove user email address
 
-###User model
+###User model <- Chris
 - Add tagline field (string)
 
-###User Show View - Josh
+###User Show View <- Josh
 - Add tagline
 - Last active - should be when user last logged in
 - Remove "Alumni" 
 - Move "View Profile" and "View Blog" up next to name
 - APIs
 -- Slack
---GitHub (fix up)
+--GitHub (fix up) (CHRIS: Josh, don't worry about the GitHub part of it, I'll do it)
 --Twitter
 
-###New User View - Josh
+###New User View <- Josh
 - Remove "Last Active"
 - Remove "Alumni"
 - Remove "Admin"
 
-###Posts Index View - Josh
+###Posts Index View <- Josh
 - Truncate post.content (to ~100 characters)
 - Add <hr> tags between posts
 - Move subtitle to appear on line below title
 
-###Post New View
+###Post New View <- Chris
 - Mandatory fields - title, content
 - Fix RTE style (formatting buttons)
 - Move "New Post" up top
 - Remove "Back"
 
-###Post Show View
+###Post Show View <- Chris
 - Remove back
 - Move 'Edit' up top
 - Add commenter's avatar
@@ -206,7 +206,7 @@ Responsive (but not mobile-first);
 - Strftime
 - local (or at least Sydney) time
 
-###Post Edit
+###Post Edit <- Chris
 - Change "Show" to "Cancel"
 
 ###Notes
