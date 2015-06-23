@@ -212,6 +212,9 @@ Responsive (but not mobile-first);
 ###Auto-login on sign-up
 - When a new user signs up, they should be signed in with those credentials
 
+###Password reset
+- Reset password using email address
+
 ###Notes
 
 Name: 
