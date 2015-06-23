@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :required => true %>
   </div>
   <div class="field">
     <%= f.label :subtitle %><br>
@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :content %><br>
-    <%= f.text_area :content, :size => "50x10", class: "wysihtml5" %>
+    <%= f.text_area :content, :size => "50x10", :required => true, class: "wysihtml5" %>
 
   </div>
   <div class="field">
