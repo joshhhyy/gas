@@ -16,7 +16,10 @@
 //= require highlight_js/languages/ruby
 //= require jquery-readyselector
 //= require bootstrap-wysihtml5
+//= require bootstrap-sprockets
+//= require bootstrap-select
 //= require_tree .
+
 
 
 hljs.initHighlightingOnLoad();
