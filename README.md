@@ -196,11 +196,11 @@ Responsive (but not mobile-first);
 - Move "New Post" up top
 - Remove "Back"
 
-###Post Show View <- Chris
-- Remove back
-- Move 'Edit' up top
-- Add commenter's avatar
-- Add comment date (created_at)
+~~###Post Show View <- Chris~~
+~~- Remove back~~
+~~- Move 'Edit' up top~~
+~~- Add commenter's avatar~~
+~~- Add comment date (created_at)~~
 
 ###Time and date throughout application
 - Strftime
