@@ -1,14 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<h1><%= @post.title %> - <%= @post.subtitle %></h1>
 
-<p>
-  <strong>Subtitle:</strong>
-  <%= @post.subtitle %>
-</p>
 
 <p class="parseMe">
 </p>
@@ -28,6 +21,9 @@
   <%= @post.updated_at %>
 </p>
 
+<p>
+  <%= cl_image_tag(@post.cl_id) %>
+</p>
 <hr>
 <div class="comments">
   <strong> <%= 'Comments' %></strong><br>

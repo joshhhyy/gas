@@ -2,6 +2,7 @@
 
 <h1><%= @user.name %>'s Blog</h1>
 
+  <% if @posts.any? %>
     <% @posts.each do |post| %>
       <div class="postbox">
        <h3><%= link_to post.title.capitalize, [@group, @user, post] %> - <%= post.subtitle.capitalize %></h3>
@@ -25,6 +26,9 @@
 
       </div>
     <% end %>
+  <% else %>
+    <h3>User has not made any posts.</h3>
+  <% end %>
 
 <br>
 

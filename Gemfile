@@ -21,6 +21,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'gon'
 gem 'remove_turbolinks'
+gem 'highlight_js-rails'
     
 group :development do
   gem 'pry-rails'

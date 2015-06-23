@@ -12,6 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require highlight_js/highlight
+//= require highlight_js/languages/ruby
+//= require_tree .
+
+
+hljs.initHighlightingOnLoad();
 //= require jquery-readyselector
 //= require bootstrap-wysihtml5
 //= require_tree .
