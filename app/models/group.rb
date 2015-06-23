@@ -6,6 +6,8 @@
 #  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  avatar     :string
+#  instructor :string
 #
 
 class Group < ActiveRecord::Base
