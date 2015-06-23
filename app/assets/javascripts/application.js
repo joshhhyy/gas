@@ -20,30 +20,24 @@
 
 hljs.initHighlightingOnLoad();
 
-  $(document).ready(function(){
-    $('.wysihtml5').each(function(i, elem) {
+$(document).ready(function() {
+  $('.wysihtml5').each(function(i, elem) {
       $(elem).wysihtml5();
-    });  
-  
-      $(".posts.show").ready(function() {
+  });
+
+  $(".posts.show").ready(function() {
 
     console.log("Ready")
 
-    var parseText = function() {
+    var parseTextShow = function() {
       var parseMe = $(".parseMe");
-      stringToParse = gon.postContent;
-      html = $.parseHTML(stringToParse)
-      console.log(html)
+        stringToParse = gon.postContent;
+        html = $.parseHTML(stringToParse)
+        console.log(html)
 
-      $('.parseMe').append( html );
-
-    };
-    parseText();
+        $('.parseMe').append(html);
+      };
+    parseTextShow();
   });
 
-
-
-  })
-
-
-
+})

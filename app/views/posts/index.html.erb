@@ -6,7 +6,7 @@
     <% @posts.each do |post| %>
       <div class="postbox">
        <h3><%= link_to post.title.capitalize, [@group, @user, post] %> - <%= post.subtitle.capitalize %></h3>
-       <p>"<%= post.content %>"</p>
+      <p><%= post.content.html_safe if post.content %></p>
        <p>Tags: <%= post.tags %></p>
 
         <% if post.created_at == post.updated_at %>
