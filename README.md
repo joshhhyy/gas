@@ -132,7 +132,7 @@ Responsive (but not mobile-first);
 ###Tagcloud (nice to have)
 - Make it.
 
-###Intellinav - Add "Sign up" (new user) <- Alfie
+~~###Intellinav - Add "Sign up" (new user) <- Alfie~~
 
 ###Group Index View <- Alfie
 - "Destroy" - admin only
