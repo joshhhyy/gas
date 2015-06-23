@@ -11,7 +11,7 @@
   <div class="backgroundContainer"></div>
   <div class="contentContainer">
 
-  <div class="nav">
+  <nav>
     <%= link_to 'GA Students Blog', root_path %>
     <% if @current_user.present? %>
       <%= link_to @current_user.name, group_user_path(@current_user.group_id, @current_user) %>
@@ -20,7 +20,16 @@
     <% else %>
       <%= link_to 'Login', login_path %>
     <% end %>
-  </div>
+  
+    <%= form_tag(posts_path, :method => "get", id: "search-post", ) do %>
+      <%= text_field_tag :search_posts, params[:search], value: params[:search_posts], placeholder: "Search Posts" %>
+      <%= submit_tag "Find Post" %>
+    <% end %>
+    <%= form_tag(users_path, :method => "get", id: "search-user") do %>
+      <%= text_field_tag :search_users, params[:search], value: params[:search_users], placeholder: "Search Users" %>
+      <%= submit_tag "Find User" %>
+    <% end %>
+  </nav>
 
 <%= yield %>
 

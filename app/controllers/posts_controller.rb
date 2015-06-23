@@ -7,7 +7,19 @@ class PostsController < ApplicationController
     @group = Group.find params[:group_id]
     @user = User.find params[:user_id]
     @posts = @user.posts
+    if params[:search_posts]
+      @posts = Post.search(params[:search_posts]).order("created_at DESC")
+    else
+      @posts = @user.posts
+    end
   end
+
+  def search
+    @posts = Post.search( params[:search_posts] )
+    render :search_page
+  end
+
+
 
   # GET /posts/1
   # GET /posts/1.json
