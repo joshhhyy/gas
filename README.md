@@ -91,28 +91,29 @@ Gems
 Backbone (maybe)
 HTML, Javascript, CSS
 APIs
-APIs
 
-Slack:
+###APIs
+
+####Slack:
 Profile page: name, avatar, link to DM, link to Slack profile);
 Post page: share post on Slack;
-GitHub:
+####GitHub:
 Profile page: name, avatar, recent commit(s), link to GitHub profile;
 (maybe) ‘Sign In with GitHub”;
-Twitter:
+####Twitter:
 Profile page: name, avatar, recent tweet(s), link to Twitter profile;
-LinkedIn:
+####LinkedIn:
 Profile page: name, avatar, link to LinkedIn profile;
-General Assembly:
+####General Assembly:
 Single sign-on to/from GA/blog;
-Heroku:
+####Heroku:
  Name, avatar, recent apps, link to Heroku profile;
-Facebook:
+####Facebook:
 Profile page: Name, avatar, recent post(s), share post on Facebook, link to Facebook profile.
-GeoCoder:
+####GeoCoder:
 Get location to set location.
 
-Gems
+###Gems
 
 bcrypt: Authentication.
 Bootstrap (or maybe Bootstripe): CSS.
@@ -124,16 +125,89 @@ Responsive (but not mobile-first);
 
 Project Plan
 
+...do stuff. HEAPS of stuff. And get it done by the time the project's due. 
 
+##Backlog
 
+###Tagcloud
+- Make it.
 
-Notes
+###Intellinav - Add "Sign up" (new user)
 
-Syntax-highlighting:
-Look at HLSyntax;
-Feature, implementation and design inspiration:
-medium.com;
-Alfie’s blog;
+###Group Index View
+- "Destroy" - admin only
+- "Add a class" - admin only
+
+###Search forms
+- One form for both fields, select search type (eg "Search for user" and "Search for posts") by drop-down
+
+###Groups model
+- Add field - avatar (string)
+- Add field - instructor (string)
+- Add field - instructor avatar (string) ??
+
+###Group Index View
+- Add group avatar
+- Add number of users in group
+- Add instructor name
+
+###Homepage 
+- Create footer
+- Add GA logo and link in footer
+- Add Github repo link in footer
+- Add Contact link in footer
+
+###Group Show View
+- Remove "Back" link
+- Remove "New user"
+- "Edit" - admin only
+- Add group avatar
+- Add user taglines
+- Add Instructor name
+- Add user avatar
+- Remove user email address
+
+###User model
+- Add tagline field (string)
+
+###User Show View
+- Add tagline
+- Last active - should be when user last logged in
+- Remove "Alumni" 
+- Move "View Profile" and "View Blog" up next to name
+- APIs
+-- Slack
+--GitHub (fix up)
+--Twitter
+
+###New User View
+- Remove "Last Active"
+- Remove "Alumni"
+- Remove "Admin"
+
+###Posts Index View
+- Truncate post.content (to ~100 characters)
+- Add <hr> tags between posts
+- Move subtitle to appear on line below title
+
+###Post New View
+- Mandatory fields - title, content
+- Fix RTE style (formatting buttons)
+- Move "New Post" up top
+- Remove "Back"
+
+###Post Show View
+- Remove back
+- Move 'Edit' up top
+- Add commenter's avatar
+- Add comment date (created_at)
+
+###Time and date throughout application
+- Strftime
+- local (or at least Sydney) time
+
+###Notes
+
 Name: 
 ‘GAS’ (General Assembly Students blog):
 “Dude, put that on GAS!”
