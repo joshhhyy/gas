@@ -176,9 +176,9 @@ Responsive (but not mobile-first);
 - Remove "Alumni" 
 - Move "View Profile" and "View Blog" up next to name
 - APIs
-..- Slack
-..-GitHub (fix up) (CHRIS: Josh, don't worry about the GitHub part of it, I'll do it)
-..-Twitter
+..* Slack
+..* GitHub (fix up) (CHRIS: Josh, don't worry about the GitHub part of it, I'll do it)
+..* Twitter
 
 ###New User View <- Josh
 - Remove "Last Active"
