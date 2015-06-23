@@ -35,6 +35,9 @@ Rails.application.routes.draw do
 
   root :to => 'groups#index'
 
+  get '/posts' => 'posts#search', :as => "posts"
+  get '/users' => 'users#search', :as => "users"
+
   resources :groups do
     resources :users do 
       resources :posts do

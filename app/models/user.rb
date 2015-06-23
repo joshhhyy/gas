@@ -21,4 +21,14 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :email, :presence => true
   validates :email, :uniqueness => true
+
+  def self.search(search)
+    User.where( [
+      "name ILIKE :query or
+       email ILIKE :query
+      ",
+      { :query => search }
+    ] )
+  end
 end
+
