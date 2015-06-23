@@ -21,6 +21,7 @@ gem 'cloudinary'
 gem 'jquery-rails'
 gem 'gon'
 gem 'remove_turbolinks'
+gem 'highlight_js-rails'
     
 group :development do
   gem 'pry-rails'

@@ -12,4 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require highlight_js/highlight
+//= require highlight_js/languages/ruby
 //= require_tree .
+
+
+hljs.initHighlightingOnLoad();
