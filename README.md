@@ -134,22 +134,22 @@ Responsive (but not mobile-first);
 
 ~~###Intellinav - Add "Sign up" (new user) <- Alfie~~
 
-###Group Index View <- Alfie
-- "Destroy" - admin only
-- "Add a class" - admin only
+~~###Group Index View <- Alfie~~
+~~- "Destroy" - admin only~~
+~~- "Add a class" - admin only~~
 
 ###Search forms <- Alfie
 - One form for both fields, select search type (eg "Search for user" and "Search for posts") by drop-down
 
 ###Groups model <- Alfie
-- Add field - avatar (string)
-- Add field - instructor (string)
+~~- Add field - avatar (string)~~
+~~- Add field - instructor (string)~~
 - Add field - instructor avatar (string) ??
 
 ###Group Index View <- Alfie
-- Add group avatar
+~~- Add group avatar~~
 - Add number of users in group
-- Add instructor name
+~~- Add instructor name~~
 
 ###Homepage (low priority)
 - Create footer
@@ -159,7 +159,7 @@ Responsive (but not mobile-first);
 
 ###Group Show View <- Josh
 - Remove "Back" link
-- Remove "New user"
+~~- Remove "New user"~~
 - "Edit" - admin only
 - Add group avatar
 - Add user taglines
