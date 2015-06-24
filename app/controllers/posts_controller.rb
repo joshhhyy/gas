@@ -51,6 +51,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    # raise params.inspect
     @group = Group.find params[:group_id]
     @user = User.find params[:user_id]
     @post = Post.new(post_params)
