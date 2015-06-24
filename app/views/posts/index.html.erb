@@ -10,6 +10,7 @@
         <h4><%= post.subtitle.capitalize %></h4>
         <p>Tags: <%= post.tags %></p>
 
+
         <% if post.created_at == post.updated_at %>
           <p>Created at: <%= post.created_at.strftime "%b %e, %l:%M %p" %></p>
 

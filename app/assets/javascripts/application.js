@@ -45,16 +45,12 @@ $(document).ready(function() {
 
   $(".posts.show").ready(function() {
 
-    console.log("Ready")
-
     var parseTextShow = function() {
       var parseMe = $(".parseMe");
-        stringToParse = gon.postContent;
-        html = $.parseHTML(stringToParse)
-        console.log(html)
-
-        $('.parseMe').append(html);
-      };
+      stringToParse = gon.postContent;
+      html = $.parseHTML(stringToParse)
+      $('.parseMe').append(html);
+    }
     parseTextShow();
   });
 })
