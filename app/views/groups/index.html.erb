@@ -2,33 +2,21 @@
 
 <h1>G.A.S</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Class</th>
-      <th>Instructor</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @groups.each do |group| %>
-      <tr>
-        <td><% if group.avatar == "" %>
-              <img src="/assets/avatar-default.png" width=100 height=100>
-            <% else %>
-              <img src=<%= group.avatar %>>
-            <% end %></td>
-        <td><%= link_to group.name, group_path(group) %> </td> 
-        <td><%= group.instructor %></td>
-        <td>Students: <%= group.users.length %></td>
-        <% if @current_user.present? && @current_user.admin.present? %>
-          <td>| <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
-        <% end %>
-      </tr> 
-    <% end %>
-  </tbody>
-</table>
+  <% @groups.each do |group| %>
+    <div class="groupList">
+      <% if group.avatar == "" %>
+            <img src="/assets/avatar-default.png" width=100 height=100>
+          <% else %>
+            <img src=<%= group.avatar %>>
+          <% end %>
+     <p><%= link_to group.name, group_path(group) %></p>
+     <p><%= group.instructor %></p>
+     <p>Students: <%= group.users.length %></p>
+      <% if @current_user.present? && @current_user.admin.present? %>
+        <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %> 
+      <% end %>
+    </div>
+  <% end %>
 
 <br>
 

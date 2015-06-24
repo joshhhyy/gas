@@ -3,6 +3,9 @@
 <p>
   <strong><%= @group.name %></strong>
 </p>
+<p>
+  <%= image_tag @group.avatar %>
+</p>
 <% @users.each do |user| %> 
   <%= user.name.capitalize %> <br>
   <i>"<%= user.tagline %>"</i> <br>
