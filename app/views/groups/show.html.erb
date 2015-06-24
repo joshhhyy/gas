@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h3>
   <strong><%= @group.name %></strong>
+</h3>
+
+<p>
+  <strong>Instructor:</strong> <%= @group.instructor %>    
 </p>
+
 <% @users.each do |user| %> 
   <%= user.name.capitalize %> -
   <% if user.tagline %>
