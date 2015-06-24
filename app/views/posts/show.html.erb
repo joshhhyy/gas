@@ -22,7 +22,9 @@
   <%= @post.updated_at.strftime "%b %e, %l:%M %p" %>
 </p>
 
-
+<p>
+  <%= cl_image_tag(@post.cl_id) %>
+</p>
 <hr>
 
 <div class="comments">
