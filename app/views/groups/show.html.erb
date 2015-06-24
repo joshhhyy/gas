@@ -10,8 +10,9 @@
   <hr>
 <% end %>
 
-<% if @current_user.admin %>
-  <%= link_to 'Edit', edit_group_path(@group) %> 
+<% if @current_user && if @current_user.admin %>
+  <%= link_to 'Edit', edit_group_path(@group) %>
+<% end %>
 <% end %>
 
 
