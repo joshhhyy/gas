@@ -12,6 +12,9 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find params[:id]
     @users = @group.users
+    # Code for tag cloud - this next line is the best line of code in the history of everything.
+    @all_tags = Post.all.pluck(:tags).reject(&:empty?).flatten.join(", ").split(", ")
+    gon.allTags = @all_tags
   end
 
   # GET /groups/new
