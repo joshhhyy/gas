@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Class</th>
+      <th></th>
       <th>Instructor</th>
       <th colspan="3"></th>
     </tr>
@@ -14,12 +15,12 @@
   <tbody>
     <% @groups.each do |group| %>
       <tr>
+        <td><%= link_to group.name, group_path(group) %> </td> 
         <td><% if group.avatar == "" %>
               <img src="/assets/avatar-default.png" width=100 height=100>
             <% else %>
               <img src=<%= group.avatar %>>
             <% end %></td>
-        <td><%= link_to group.name, group_path(group) %> </td> 
         <td><%= group.instructor %></td>
         <% if @current_user.present? && @current_user.admin.present? %>
           <td>| <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
