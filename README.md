@@ -129,35 +129,35 @@ Responsive (but not mobile-first);
 
 ##Backlog
 
-###Tagcloud
+###Tagcloud (nice to have)
 - Make it.
 
-###Intellinav - Add "Sign up" (new user)
+~~###Intellinav - Add "Sign up" (new user) <- Alfie~~
 
-###Group Index View
+###Group Index View <- Alfie
 - "Destroy" - admin only
 - "Add a class" - admin only
 
-###Search forms
+###Search forms <- Alfie
 - One form for both fields, select search type (eg "Search for user" and "Search for posts") by drop-down
 
-###Groups model
+###Groups model <- Alfie
 - Add field - avatar (string)
 - Add field - instructor (string)
 - Add field - instructor avatar (string) ??
 
-###Group Index View
+###Group Index View <- Alfie
 - Add group avatar
 - Add number of users in group
 - Add instructor name
 
-###Homepage 
+###Homepage (low priority)
 - Create footer
 - Add GA logo and link in footer
 - Add Github repo link in footer
 - Add Contact link in footer
 
-###Group Show View - Josh
+###Group Show View <- Josh
 - Remove "Back" link
 - Remove "New user"
 - "Edit" - admin only
@@ -167,47 +167,53 @@ Responsive (but not mobile-first);
 - Add user avatar
 - Remove user email address
 
-###User model
-- Add tagline field (string)
+~~###User model <- Chris~~
+~~Add tagline field (string)~~
 
-###User Show View - Josh
+###User Show View <- Josh
 - Add tagline
 - Last active - should be when user last logged in
 - Remove "Alumni" 
 - Move "View Profile" and "View Blog" up next to name
 - APIs
--- Slack
---GitHub (fix up)
---Twitter
+..* Slack
+..* GitHub (fix up) (CHRIS: Josh, don't worry about the GitHub part of it, I'll do it)
+..* Twitter
 
-###New User View - Josh
-- Remove "Last Active"
-- Remove "Alumni"
-- Remove "Admin"
+~~###New User View <- Josh~~
+~~- Remove "Last Active"~~
+~~- Remove "Alumni"~~
+~~- Remove "Admin"~~
+~~- Add field required validators~~
 
-###Posts Index View - Josh
+###Posts Index View <- Josh
 - Truncate post.content (to ~100 characters)
-- Add <hr> tags between posts
+- Add hr tags between posts
 - Move subtitle to appear on line below title
 
-###Post New View
+###Post New View <- Chris
 - Mandatory fields - title, content
 - Fix RTE style (formatting buttons)
-- Move "New Post" up top
-- Remove "Back"
+~~- Remove "Back"~~
 
-###Post Show View
-- Remove back
-- Move 'Edit' up top
-- Add commenter's avatar
-- Add comment date (created_at)
+~~###Post Show View <- Chris~~
+~~- Remove back~~
+~~- Move 'Edit' up top~~
+~~- Add commenter's avatar~~
+~~- Add comment date (created_at)~~
 
 ###Time and date throughout application
 - Strftime
 - local (or at least Sydney) time
 
-###Post Edit
-- Change "Show" to "Cancel"
+~~###Post Edit <- Chris~~
+~~- Change "Show" to "Cancel"~~
+
+###Auto-login on sign-up
+- When a new user signs up, they should be signed in with those credentials
+
+###Password reset
+- Reset password using email address
 
 ###Notes
 

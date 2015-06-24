@@ -13,6 +13,7 @@
 #  updated_at      :datetime         not null
 #  password_digest :string
 #  group_id        :integer
+#  tagline         :string
 #
 
 class User < ActiveRecord::Base
