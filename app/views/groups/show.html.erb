@@ -5,6 +5,7 @@
 </p>
 <% @users.each do |user| %> 
   <%= user.name.capitalize %> <br>
+  <i>"<%= user.tagline %>"</i>
   <%= link_to "Profile", [@group, user] %> |
   <%= link_to "Blog", group_user_posts_path(@group, user) %><br>
   <hr>
