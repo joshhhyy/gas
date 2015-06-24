@@ -10,18 +10,43 @@
 <body class="<%= controller_name %> <%= action_name %>">
 
   <div class="backgroundContainer"></div>
+<!-- Navigation bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+<!-- Navigation bar - left (brand) -->
+        <div class="nav navbar-nav navbar-left">
+          <a class="navbar-brand"><%= link_to 'GA Students Blog', root_path %></a>
+        </div>
+<!-- Top navigation bar - right -->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="none"></span>
+              <% if @current_user.present? %>
+                <div class="miniAvatarImage img-circle" style="background-image: url('<%= @current_user.avatar %>')"></div>
+              <% else %>
+                <div class="miniAvatarImage img-circle" style="background-image: url('/assets/avatar-default.png');"></div> 
+              <% end %>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <% if @current_user.present? %>
+                <li><%= link_to 'Edit Profile', group_user_path(@current_user.group_id, @current_user) %></li>
+                <li><%= link_to("Log out #{@current_user.name}", login_path, :method => :delete) %></li>
+                <li><%= link_to 'New Post', new_group_user_post_path(@current_user.group_id, @current_user.id) %></li>
+              <% else %>
+                <li><i>You are not signed in</i></li>
+                <li><%= link_to 'Login', login_path %></li>
+                <li><%= link_to 'Sign Up', new_group_user_path(Group.first.id) %></li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
   <div class="contentContainer">
 
-  <nav>
-    <%= link_to 'GA Students Blog', root_path %>
-    <% if @current_user.present? %>
-      <%= link_to @current_user.name, group_user_path(@current_user.group_id, @current_user) %>
-      <%= link_to("Log out #{@current_user.name}", login_path, :method => :delete) %>
-      <%= link_to 'New Post', new_group_user_post_path(@current_user.group_id, @current_user.id) %>
-    <% else %>
-      <%= link_to 'Login', login_path %>
-      <%= link_to 'Sign Up', new_group_user_path(Group.first.id) %>
-    <% end %>
+
+
+
     <div class="dropdown">
       <%= form_tag(posts_path, :method => "get", id: "search-post") do %>
         <%= text_field_tag :search_posts, params[:search], value: params[:search_posts], placeholder: "Search Posts" %>

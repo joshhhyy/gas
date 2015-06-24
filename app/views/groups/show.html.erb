@@ -2,21 +2,32 @@
 
 <div class="tagCloud">
   
+  <!-- One day, this will house the tag cloud -->
+
 </div>
 
-<p>
-  <strong><%= @group.name %></strong>
-</p>
+  <h1 class="centerText"><%= @group.name %></h1>
+  <hr>
+
 <% @users.each do |user| %> 
-  <%= user.name.capitalize %> -
-  <% if user.tagline %>
-    <i>"<%= user.tagline %>"</i> <br>
-  <% end %>
-  <% if user.avatar %>
-    <img src="<%= user.avatar %>">
-  <% end %>
-  <%= link_to "Profile", [@group, user] %> |
-  <%= link_to "Blog", group_user_posts_path(@group, user) %><br>
+  <div class="flexBox">
+    <div class="imageLinksGroup">
+      
+      <% if user.avatar == "" %>
+        <div class="thumbnailImage img-circle" style="background-image: url('/assets/avatar-default.png');" ></div>
+      <% else %>
+        <div class="thumbnailImage img-circle" style="background-image: url('<%= user.avatar %>')" ></div>
+      <% end %>
+      <h3><%= user.name.capitalize %> 
+        <% if user.tagline %>
+          <br>
+          <small><%= user.tagline %></small> <br>
+        <% end %>
+      </h3>
+      <%= link_to "Profile", [@group, user] %> |
+      <%= link_to "Blog", group_user_posts_path(@group, user) %>
+    </div>
+  </div>
   <hr>
 <% end %>
 

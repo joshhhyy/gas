@@ -44,6 +44,7 @@
 
 .contentContainer {
   position: absolute;
+  top: 100px;
   left: 0;
   right: 0;
   z-index: 0;
@@ -174,3 +175,52 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 .xml .hljs-cdata {
   opacity: 0.5;
 }
+
+.thumbnailImage {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-position: center center;
+  background-size: cover;
+  border: 1px black solid;
+}
+
+.largeImage {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  background-position: center center;
+  background-size: cover;
+  border: 1px black solid;
+}
+.miniAvatarImage {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-position: center center;
+  background-size: cover;
+  border: 1px black solid;
+}
+
+.flexBox {
+  display: flex;
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+
+  align-items: center;
+}
+
+.imageLinksGroup {
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  vertical-align: center;
+}
+
+.centerText {
+  text-align: center;
+}
+
+
