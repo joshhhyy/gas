@@ -129,7 +129,7 @@ Responsive (but not mobile-first);
 
 ##Backlog
 
-###Tagcloud (nice to have)
+###Tagcloud (nice to have) <- Chris
 - Make it.
 
 ~~###Intellinav - Add "Sign up" (new user) <- Alfie~~
@@ -144,40 +144,42 @@ Responsive (but not mobile-first);
 ###Groups model <- Alfie
 ~~- Add field - avatar (string)~~
 ~~- Add field - instructor (string)~~
-- Add field - instructor avatar (string) ??
+~~- Add field - instructor avatar (string) ??~~
 
 ###Group Index View <- Alfie
 ~~- Add group avatar~~
 - Add number of users in group
 ~~- Add instructor name~~
 
-###Homepage (low priority)
+###Homepage (low priority) <- Chris
 - Create footer
 - Add GA logo and link in footer
 - Add Github repo link in footer
 - Add Contact link in footer
 
 ###Group Show View <- Josh
-- Remove "Back" link
+~~- Remove "Back" link~~
 ~~- Remove "New user"~~
-- "Edit" - admin only
+~~- "Edit" - admin only~~
 - Add group avatar
 - Add user taglines
 - Add Instructor name
 - Add user avatar
-- Remove user email address
+~~- Remove user email address~~
 
 ~~###User model <- Chris~~
 ~~Add tagline field (string)~~
 
 ###User Show View <- Josh
-- Add tagline
+~~- Add tagline~~
 - Last active - should be when user last logged in
-- Remove "Alumni" 
-- Move "View Profile" and "View Blog" up next to name
+~~- Remove "Alumni"~~ 
+~~- Move "View Profile" and "View Blog" up next to name~~
+
+###API Bullshit <-Chris
 - APIs
 ..* Slack
-..* GitHub (fix up) (CHRIS: Josh, don't worry about the GitHub part of it, I'll do it)
+..* GitHub (fix up) 
 ..* Twitter
 
 ~~###New User View <- Josh~~
@@ -189,10 +191,10 @@ Responsive (but not mobile-first);
 ###Posts Index View <- Josh
 - Truncate post.content (to ~100 characters)
 - Add hr tags between posts
-- Move subtitle to appear on line below title
+~~- Move subtitle to appear on line below title~~
 
 ###Post New View <- Chris
-- Mandatory fields - title, content
+~~- Mandatory fields - title, content~~
 - Fix RTE style (formatting buttons)
 ~~- Remove "Back"~~
 
@@ -202,18 +204,18 @@ Responsive (but not mobile-first);
 ~~- Add commenter's avatar~~
 ~~- Add comment date (created_at)~~
 
-###Time and date throughout application
+###Time and date throughout application <- Allllan
 - Strftime
-- local (or at least Sydney) time
+- local (or at least Sydney) time (look at Time.zone.now (but without the 'now' bit))
 
 ~~###Post Edit <- Chris~~
 ~~- Change "Show" to "Cancel"~~
 
-###Auto-login on sign-up
+###Auto-login on sign-up <- J-Bon
 - When a new user signs up, they should be signed in with those credentials
 
-###Password reset
-- Reset password using email address
+###Password reset <- Alfie 
+- Reset password using email address (need to deploy to Heroku and need plugins to send email from Heroku).
 
 ###Notes
 
