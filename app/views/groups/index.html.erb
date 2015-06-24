@@ -1,39 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>G.A.S</h1>
+<h1 class="centerText">Classes</h1>
+<hr>
 
-<table>
-  <thead>
-    <tr>
-      <th>Class</th>
-      <th></th>
-      <th>Instructor</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @groups.each do |group| %>
-      <tr>
-        <td><%= link_to group.name, group_path(group) %> </td> 
-        <td><% if group.avatar == "" %>
-              <img src="/assets/avatar-default.png" width=100 height=100>
-            <% else %>
-              <img src=<%= group.avatar %>>
-            <% end %></td>
-        <td><%= group.instructor %></td>
-        <% if @current_user.present? && @current_user.admin.present? %>
-          <td>| <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+<% @groups.each do |group| %>
+  <div class="flexBox">
+    <div class="imageLinksGroup">
+      <% if group.avatar == "" %>
+        <div class="thumbnailImage img-circle" style="background-image: url('/assets/avatar-default.png')" ></div>
+      <% else %>
+        <div class="thumbnailImage img-circle" style="background-image: url('<%= group.avatar %>')" ></div>
+      <% end %>
+      <h3><%= link_to group.name, group_path(group) %>
+        <% if group.instructor %>
+          <small>Instructor: <%= group.instructor %></small>
         <% end %>
-      </tr> 
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-
-
-<% if @current_user.present? && @current_user.admin.present? %>
-  <%= link_to 'Add a Class', new_group_path %> <br>
+      </h3>
+      <% if @current_user.present? && @current_user.admin.present? %>
+        <%= link_to 'Destroy Class', group, method: :delete, data: { confirm: 'Are you sure?' } %> | <%= link_to 'New Class', new_group_path %> 
+      <% end %>
+    </div>
+  </div>
+  <hr>
 <% end %>
+
+

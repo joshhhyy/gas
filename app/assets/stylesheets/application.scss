@@ -34,12 +34,12 @@
   z-index: -10;
   display: block;
   background-image: image-url('background-default.jpg');
-  -webkit-filter: blur(6px) grayscale(70%) opacity(20%); 
-  -moz-filter: blur(6px) grayscale(70%) opacity(20%); 
-  -o-filter: blur(6px) grayscale(70%) opacity(20%); 
-  -ms-filter: blur(6px) grayscale(70%) opacity(20%);  
-  -webkit-filter: blur(6px) grayscale(70%) opacity(20%); 
-  filter: blur(6px) grayscale(70%) opacity(20%); 
+  -webkit-filter: blur(6px) grayscale(70%) opacity(70%); 
+  -moz-filter: blur(6px) grayscale(70%) opacity(70%); 
+  -o-filter: blur(6px) grayscale(70%) opacity(70%); 
+  -ms-filter: blur(6px) grayscale(70%) opacity(70%);  
+  -webkit-filter: blur(6px) grayscale(70%) opacity(70%); 
+  filter: blur(6px) grayscale(70%) opacity(70%); 
 }
 
 .contentContainer {
@@ -202,6 +202,10 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
   border: 1px black solid;
 }
 
+nav .miniAvatarImage {
+  border: 1px grey solid;
+}
+
 .flexBox {
   display: flex;
 
@@ -226,4 +230,38 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 .contentContainer {
   margin: 0 auto;
   max-width: 960px;
+}
+
+nav {
+  z-index: 100;
+  padding: 20px;
+  height: 75px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: black;
+  border-bottom: 1px black solid;
+
+  -moz-box-shadow: 1px 2px 5px 1px black;
+  -webkit-box-shadow: 1px 2px 5px 1px black;
+  box-shadow: 1px 2px 5px 1px black;
+
+}
+
+.navLeft {
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: left;
+}
+
+.navRight {
+  position: fixed;
+  margin-right: 20px;
+  right: 0px;
+
+
+
+  display: inline-block;
+  vertical-align: right;
 }

@@ -5,9 +5,18 @@
   <!-- One day, this will house the tag cloud -->
 
 </div>
+<div class="flexBox">
+  <div class="imageLinksGroup">
+    <% if @group.avatar == "" %>
+      <div class="thumbnailImage img-circle" style="background-image: url('/assets/avatar-default.png')" ></div>
+    <% else %>
+      <div class="thumbnailImage img-circle" style="background-image: url('<%= @group.avatar %>')" ></div>
+    <% end %>
+    <h1 class="centerText"><%= @group.name %></h1>
 
-  <h1 class="centerText"><%= @group.name %></h1>
-  <hr>
+  </div>
+</div>
+    <hr>  
 
 <% @users.each do |user| %> 
   <div class="flexBox">
