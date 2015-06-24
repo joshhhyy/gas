@@ -22,8 +22,13 @@
 
 
 
+
+// Syntax highlighter function call
+
 hljs.initHighlightingOnLoad();
 
+
+// Script for generating rich text toolbar (can be used anywhere)
 $(document).ready(function() {
   $('.wysihtml5').each(function(i, elem) {
     $(elem).wysihtml5({
@@ -41,8 +46,13 @@ $(document).ready(function() {
     });
   });
 
+// Code for tag cloud (WIP)
+  $(".groups.show").ready(function() {
+    console.log(gon.allTags);
 
+  })
 
+// Script for parsing post content 
   $(".posts.show").ready(function() {
 
     var parseTextShow = function() {
