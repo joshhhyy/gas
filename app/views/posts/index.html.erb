@@ -5,7 +5,8 @@
   <% if @posts.any? %>
     <% @posts.each do |post| %>
       <div class="postbox">
-        <h3><%= link_to post.title.capitalize, [@group, @user, post] %> - <%= post.subtitle.capitalize %></h3>
+        <h3><%= link_to post.title.capitalize, [@group, @user, post] %> </h3>
+        <h4><%= post.subtitle.capitalize %></h4>
         <p><%= post.content.html_safe if post.content %></p>
         <p>Tags: <%= post.tags %></p>
 
@@ -24,6 +25,7 @@
         <% end %>
       <% end %>
 
+      <hr>
       </div>
     <% end %>
   <% else %>
