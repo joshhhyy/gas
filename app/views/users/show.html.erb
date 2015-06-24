@@ -1,8 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> |
+<%= link_to 'Back', group_path(@group) %> |
+<% if @user === @current_user %>
+  <%= link_to 'Edit', edit_group_user_path(@group, @user) %> 
+<% end %>
+
 <p>
-  <strong>Name:</strong>
   <%= @user.name %>
+
+</p>
+
+<p>
+  <i>"<%= @user.tagline %>"</i>
 </p>
 
 <p>
@@ -24,10 +34,6 @@
   <%= @user.last_active %>
 </p>
 
-<p>
-  <strong>Alumni:</strong>
-  <%= @user.alumni %>
-</p>
 
 <div class="social">
 
@@ -42,9 +48,3 @@
 </div>
 
 
-
-<%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> |
-<%= link_to 'Back', group_path(@group) %> |
-<% if @user === @current_user %>
-  <%= link_to 'Edit', edit_group_user_path(@group, @user) %> 
-<% end %>

@@ -5,9 +5,13 @@ class ApplicationController < ActionController::Base
 
   before_action :authenticate
 
-
+  before_filter :mailer_set_url_options
 
   private
+
+  def mailer_set_url_options
+    ActionMailer::Base.default_url_options[:host] = request.host_with_port
+  end
 
   def authenticate
     @current_user = User.find_by_id session[:user_id] if session[:user_id]

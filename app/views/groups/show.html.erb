@@ -7,11 +7,13 @@
   <%= user.name.capitalize %> <br>
   <%= link_to "Profile", [@group, user] %> |
   <%= link_to "Blog", group_user_posts_path(@group, user) %><br>
-  <%= user.email %> 
   <hr>
 <% end %>
 
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
+<% if @current_user && if @current_user.admin %>
+  <%= link_to 'Edit', edit_group_path(@group) %>
+<% end %>
+<% end %>
+
 
 
