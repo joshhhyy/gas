@@ -14,15 +14,17 @@
 
 <p>
   <strong>Created at:</strong>
-  <%= @post.created_at %>
+  <%= @post.created_at.strftime "%b %e, %l:%M %p" %>
 </p>
 
 <p>
   <strong>Updated at:</strong>
-  <%= @post.updated_at %>
+  <%= @post.updated_at.strftime "%b %e, %l:%M %p" %>
 </p>
 
-
+<p>
+  <%= cl_image_tag(@post.cl_id) %>
+</p>
 <hr>
 
 <div class="comments">
@@ -36,7 +38,7 @@
   <% end %>
      <p><%= User.find(comment.user_id).name %> <%= comment.title %> </p>
       <%= comment.content %> 
-     <p> <%= comment.created_at %> </p>
+     <p> <%= comment.created_at.strftime "%b %e, %l:%M %p" %> </p>
     <br>
   <% end %>
 </div>
