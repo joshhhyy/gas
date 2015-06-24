@@ -5,7 +5,7 @@
       
       
       <h3><%= post.title.capitalize %> - <%= post.subtitle.capitalize %></h3>
-       <p>"<%= post.content %>"</p>
+       <p>"<%= post.content.html_safe if post.content %>"</p>
        <p>Tags: <%= post.tags %></p>
 
         <% if post.created_at == post.updated_at %>

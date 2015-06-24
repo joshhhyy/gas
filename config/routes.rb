@@ -43,6 +43,8 @@
 
 Rails.application.routes.draw do
 
+  get 'password_resets/new'
+
   root :to => 'groups#index'
 
   get '/posts' => 'posts#search', :as => "posts"
@@ -56,6 +58,8 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :password_resets
 
 
   get '/login' => 'session#new'
