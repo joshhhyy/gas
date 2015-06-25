@@ -65,7 +65,13 @@ $(document).ready(function() {
       $('.quoteBox').fadeIn(200, function() {
       });
 
+    $('.closeMe').on('click', function(event) {
+      $('.quoteBox').fadeOut(200, function() {
+      });
     })
+
+  })
+
     
   })
 
