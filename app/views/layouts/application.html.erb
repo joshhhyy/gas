@@ -12,18 +12,17 @@
  <div class="backgroundContainer"></div>
 <!-- Navigation bar -->
  <nav>
-   <a class="navLeft"><%= link_to 'GA Students Blog', root_path %></a>
-           <div class="col-lg-6">
+  <a class="navLeft"><%= link_to 'GA Students Blog', root_path %></a>
+  <div class="col-lg-6">
    <div class="input-group"> 
-
      <%= form_tag(users_path, :method => "get", id: "search-user") do %>
-       <%= text_field_tag :search, params[:search], value: params[:search]%>
+       <%= text_field_tag :search, params[:search], value: params[:search], :class=>"form-control"%>
      <div class="input-group-btn">
        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
        <ul class="dropdown-menu dropdown-menu-right">
-         <li><%= submit_tag "Find Post" %> 
+         <li><%= submit_tag "Find Post", :class => "btn btn-default" %> 
              <% end %></li>
-         <li><%= submit_tag "Find User" %>
+         <li><%= submit_tag "Find User", :class => "btn btn-default" %>
              <%# end %></li>
        </ul>
      </div><!-- /btn-group -->
