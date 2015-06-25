@@ -45,15 +45,19 @@ $(".users.show").ready(function() {
   var getGithub = function() {
 
     username = gon.user.github_username;
+    if (username === null) {
+      username = "aoijwefaneaarjn"
+    }
     var gitUrl = "https://api.github.com/search/users";
 
     $.getJSON(gitUrl, {
       q: username
     }).done(function(results) {
+
       console.log(results)
       if (results.total_count < 1) {
         var notice = $("<p>Either this user has not finished setting up their GAS profile or they've entered their GitHub username incorrectly (derp). </p>")
-        $(notice).prependTo('.github')
+        $(notice).prependTo('.githubProfile')
       } else {
 
         var githubAvatarUrl = results.items[0].avatar_url;
