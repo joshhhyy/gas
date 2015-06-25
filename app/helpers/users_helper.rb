@@ -14,7 +14,7 @@ module UsersHelper
     user_info = HTTParty.get(url)
     user_info['presence']
 
-    return user_info['presence'] + user_info
+    return user_info['presence'], user_image
   end
 
   def slackChat
