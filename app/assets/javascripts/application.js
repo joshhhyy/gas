@@ -65,7 +65,7 @@ $(document).ready(function() {
   });
 
   // $(".users.show").ready(function() {
-  //   $('#submit').on('click', function(e) {
+  //   $('#submit').on('click', function() {
   //     var message = $('#field').val();
   //     console.log(message)
 

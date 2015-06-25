@@ -18,7 +18,6 @@ module UsersHelper
   end
 
   def slackChat
-    # @user_id
     # message = valueof field
 
     # url = "https://slack.com/api/chat.postMessage?token=xoxp-3171645816-4432715041-6779629751-7f66f7&channel=#{@user_id}&text=#{message}&pretty=1"
