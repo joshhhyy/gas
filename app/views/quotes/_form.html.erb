@@ -20,6 +20,6 @@
     <%= f.select :group_id, Group.all.map {|group|[group.name, group.id]}, :required => true %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class =>"btn btn-primary"%>
   </div>
 <% end %>
