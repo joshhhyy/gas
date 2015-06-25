@@ -12,7 +12,11 @@
   <div class="backgroundContainer"></div>
 <!-- Navigation bar -->
   <nav>
-    <a class="navLeft"><%= link_to 'GA Students Blog', root_path %></a>
+  <%= link_to root_path, :class => "brand" do %>
+    <div class="navLeft thumbnailImage img-square" style="background-image: url('/assets/logo-small.png');">
+    </div> <span>GAS</span>
+  <% end %>
+
     <ul class="navRight">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="none"></span>
@@ -52,7 +56,7 @@
         <%= submit_tag "Find User" %>
       <% end %>
     </div>
-  </nav>
+
 
 <%= yield %>
 
