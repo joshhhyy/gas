@@ -27,19 +27,17 @@
 
 .backgroundContainer {
   position: fixed;
-  top: -10px;
-  left: -10px;
-  width: 2000px;
-  height: 2000px;
+  width: 100%;
+  height: 100%;
   z-index: -10;
   display: block;
   background-image: image-url('background-default.jpg');
-  -webkit-filter: blur(6px) grayscale(70%) opacity(70%); 
-  -moz-filter: blur(6px) grayscale(70%) opacity(70%); 
-  -o-filter: blur(6px) grayscale(70%) opacity(70%); 
-  -ms-filter: blur(6px) grayscale(70%) opacity(70%);  
-  -webkit-filter: blur(6px) grayscale(70%) opacity(70%); 
-  filter: blur(6px) grayscale(70%) opacity(70%); 
+  -webkit-filter: grayscale(70%) opacity(70%); 
+  -moz-filter: grayscale(70%) opacity(70%); 
+  -o-filter: grayscale(70%) opacity(70%); 
+  -ms-filter: grayscale(70%) opacity(70%);  
+  -webkit-filter:  grayscale(70%) opacity(70%); 
+  filter: grayscale(70%) opacity(70%); 
 }
 
 .contentContainer {
@@ -285,3 +283,18 @@ hr {
   display: inline-block;
 }
 
+.dropdown-menu-right {
+  text-align: center;
+  right: -250px;
+  top: -2px;
+}
+
+.input-group {
+  // right: -780px;
+}
+
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+
+  right: -250px;
+  top: -33.9px;
+}

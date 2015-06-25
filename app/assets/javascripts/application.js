@@ -64,12 +64,12 @@ $(document).ready(function() {
     parseTextShow();
   });
 
-  $(".users.show").ready(function() {
-    $('#submit').on('click', function(e) {
-      var message = $('#field').val();
-      console.log(message)
+  // $(".users.show").ready(function() {
+  //   $('#submit').on('click', function(e) {
+  //     var message = $('#field').val();
+  //     console.log(message)
 
-    })
-  })
+  //   })
+  // })
 })
 

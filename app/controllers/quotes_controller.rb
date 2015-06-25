@@ -25,7 +25,7 @@ class QuotesController < ApplicationController
   # POST /quotes.json
   def create
     @quote = Quote.new(quote_params)
-    @group = Quote.last.group_id
+    @group = @current_user.group_id
     respond_to do |format|
       if @quote.save
         format.html { redirect_to group_path(@group), notice: 'Quote was successfully created.' }
