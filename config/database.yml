@@ -25,7 +25,8 @@ development:
   <<: *default
   database: gas_development
   host: localhost
-  username: Josh
+  username: cjbarnaby
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
