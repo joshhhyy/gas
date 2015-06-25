@@ -43,7 +43,11 @@
 
 <div class="quotes">
   <strong> <%= 'Instructor quotes' %></strong><br>
-      <%= @quotes.quote %> - <%= Group.find(@quotes.group_id).name %>
+    <% if @quotes == nil %>
+      <p>No one has added any quotes </p>
+    <% else %>
+      <%= @quotes.quote %> - <%= Group.find(@group.id).name %>
+    <% end %>
 </div>
 <div class="quote">
   <%= render :partial => 'quotes/form' %>
