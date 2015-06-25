@@ -187,8 +187,8 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 
 .largeImage {
   display: inline-block;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   background-position: center center;
   background-size: cover;
   border: 1px black solid;
@@ -254,6 +254,7 @@ nav {
   margin: 0 auto;
   display: inline-block;
   vertical-align: left;
+  position: fixed;
 }
 
 .navRight {
@@ -279,3 +280,9 @@ hr {
 .brand span {
    line-height: 90px;
 }
+
+
+.social {
+  display: inline-block;
+}
+

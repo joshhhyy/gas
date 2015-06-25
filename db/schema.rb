@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150625005702) do
+ActiveRecord::Schema.define(version: 20150625030510) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,9 +60,9 @@ ActiveRecord::Schema.define(version: 20150625005702) do
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
     t.string   "github_username"
-    t.string   "linkedin_username"
     t.string   "twitter_username"
     t.string   "slack_username"
+    t.string   "linkedin_profile"
   end
 
 end
