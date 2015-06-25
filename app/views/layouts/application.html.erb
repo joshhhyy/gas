@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gas</title>
-  <%= include_gon %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+ <title>Gas</title>
+ <%= include_gon %>
+ <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller_name %> <%= action_name %>">
 
-  <div class="backgroundContainer"></div>
+ <div class="backgroundContainer"></div>
 <!-- Navigation bar -->
   <nav>
-    <a class="navLeft"><%= link_to 'GA Students Blog', root_path %></a>
+  <%= link_to root_path, :class => "brand" do %>
+    <div class="navLeft thumbnailImage img-square" style="background-image: url('/assets/logo-small.png');">
+    </div> <span>GAS</span>
+  <% end %>
+
     <ul class="navRight">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="none"></span>
@@ -24,9 +28,10 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <% if @current_user.present? %>
-              <li><%= link_to 'Edit Profile', group_user_path(@current_user.group_id, @current_user) %></li>
+              <li><%= link_to 'New Blog Post', new_group_user_post_path(@current_user.group_id, @current_user.id) %></li>
+              <li><%= link_to 'View Profile', group_user_path(@current_user.group_id, @current_user) %></li>
               <li><%= link_to("Log out #{@current_user.name}", login_path, :method => :delete) %></li>
-              <li><%= link_to 'New Post', new_group_user_post_path(@current_user.group_id, @current_user.id) %></li>
+
             <% else %>
               <li><i>You are not signed in</i></li>
               <li><%= link_to 'Login', login_path %></li>
@@ -37,25 +42,30 @@
       </ul>
   </nav>
   
+
+
   <div class="contentContainer">
 
+   <div class="input-group"> 
 
-    <div class="dropdown">
-      <%= form_tag(posts_path, :method => "get", id: "search-post") do %>
-        <%= text_field_tag :search_posts, params[:search], value: params[:search_posts], placeholder: "Search Posts" %>
-        <%= submit_tag "Find Post" %>
-      <% end %>
-      <%= form_tag(users_path, :method => "get", id: "search-user") do %>
-        <%= text_field_tag :search_users, params[:search], value: params[:search_users], placeholder: "Search Users" %>
-        <%= submit_tag "Find User" %>
-      <% end %>
-    </div>
+     <%= form_tag(users_path, :method => "get", id: "search-user") do %>
+       <%= text_field_tag :search, params[:search], value: params[:search]%>
+     <div class="input-group-btn">
+       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
+       <ul class="dropdown-menu dropdown-menu-right">
+         <li><%= submit_tag "Find Post" %> 
+             <% end %></li>
+         <li><%= submit_tag "Find User" %>
+             <%# end %></li>
+       </ul>
+     </div><!-- /btn-group -->
+   </div><!-- /input-group -->
+
 
 
 <%= yield %>
 
-  </div>
-
+ </div>
 
 
 </body>

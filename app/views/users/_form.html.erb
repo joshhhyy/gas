@@ -36,6 +36,22 @@
     <%= f.text_field :avatar %>
   </div>
   <div class="field">
+    <%= f.label :github_username %><br>
+    <%= f.text_field :github_username %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedin_username %><br>
+    <%= f.text_field :linkedin_username %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter_username %><br>
+    <%= f.text_field :twitter_username %>
+  </div>
+  <div class="field">
+    <%= f.label :slack_username %><br>
+    <%= f.text_field :slack_username %>
+  </div>
+  <div class="field">
     <%= f.label :group_id %>
     <%= f.select :group_id, Group.all.map {|group|[group.name, group.id]}, :include_blank => true, :required => true %>
   </div>

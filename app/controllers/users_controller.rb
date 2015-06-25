@@ -1,20 +1,27 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  helper UsersHelper
 
   # GET /users
   # GET /users.json
   def index
     @group = Group.find params[:group_id]
-   if params[:search_users]
-    @users = User.search(params[:search_users]).order("created_at DESC")
-   else
-    @users = User.all.order('created_at DESC')
-   end
+
+    if params[:search_users]
+      @users = User.search(params[:search_users]).order("created_at DESC")
+    else
+      @users = User.all.order('created_at DESC')
+    end
   end
 
-  def search 
-    @users = User.search( params[:search_users] )
-    render :index
+  def search  
+    if params[:commit] == "Find User"
+      @users = User.search( params[:search] )
+      render :index
+    else
+      @posts = Post.search( params[:search] )
+      render :search
+    end
   end
 
   # GET /users/1
@@ -88,6 +95,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :tagline, :email, :avatar, :last_active, :alumni, :admin, :password, :password_confirmation, :group_id)
+      params.require(:user).permit(:name, :tagline, :email, :avatar, :last_active, :alumni, :admin, :password, :password_confirmation, :group_id, :github_username, :linkedin_username, :twitter_username, :slack_username)
     end
 end

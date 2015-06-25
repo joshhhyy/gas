@@ -15,12 +15,13 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-# gem 'cloudinary'
+gem 'cloudinary'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'gon'
 gem 'remove_turbolinks'
 gem 'highlight_js-rails'
+gem 'httparty'
     
 group :development do
   gem 'pry-rails'

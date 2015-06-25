@@ -8,9 +8,9 @@
 <div class="flexBox">
   <div class="imageLinksGroup">
     <% if @group.avatar == nil %>
-      <div class="thumbnailImage img-circle" style="background-image: url('/assets/avatar-default.png')" ></div>
+      <div class="largeImage img-circle" style="background-image: url('/assets/avatar-default.png')" ></div>
     <% else %>
-      <div class="thumbnailImage img-circle" style="background-image: url('<%= @group.avatar %>')" ></div>
+      <div class="largeImage img-circle" style="background-image: url('<%= @group.avatar %>')" ></div>
     <% end %>
     <h1 class="centerText"><%= @group.name %></h1>
 

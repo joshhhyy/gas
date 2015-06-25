@@ -17,9 +17,18 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search( params[:search_posts] )
-    render :search_page
-    # raise params.inspect
+    # params[:commit] will either be "Find User" or "Find Post"
+    # if it is "Find Post"
+      # Do this stuff
+    # if it is "Find User"
+    # if params[:commit] == "Find Post"
+    #   @posts = Post.search( params[:search_posts] )
+    #   render :search_page
+    # else
+      # @users = User.search( params[:search_users] )
+      # redirect_to :controller => :users, :action => :index
+      # render group_users_path( group, @cuuser )
+    # end
   end
 
 
