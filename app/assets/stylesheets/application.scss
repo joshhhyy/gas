@@ -289,10 +289,6 @@ hr {
   top: -2px;
 }
 
-.input-group {
-  // right: -780px;
-}
-
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
 
   right: -250px;
@@ -312,4 +308,19 @@ a {
 a:hover {
   color: red;
   text-decoration: none;
+}
+
+.searchBox {
+  display: flex;
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+
+  align-items: center;
+
+}
+
+h3 {
+  margin-top: 10px;
 }

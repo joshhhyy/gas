@@ -44,20 +44,21 @@
   
   <div class="contentContainer">
 
-  
- <div class="input-group"> 
+  <div class="searchBox">
+    <div class="input-group"> 
       <%= form_tag(users_path, :method => "get", id: "search-user") do %>
-       <%= text_field_tag :search, params[:search], value: params[:search], :class=>"form-control"%>
-     <div class="input-group-btn">
-       <button type="button" class="btn btn-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
-       <ul class="dropdown-menu dropdown-menu-right">
-         <li><%= submit_tag "Find Post", :class => "btn btn-default" %> 
-             <% end %></li> <hr>
-         <li><%= submit_tag "Find User", :class => "btn btn-default" %></li>
-       </ul>
-     </div><!-- /btn-group -->
-   </div><!-- /input-group -->
-
+      <%= text_field_tag :search, params[:search], value: params[:search], :class=>"form-control"%>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><%= submit_tag "Find Post", :class => "btn btn-default" %> 
+          </li> <hr>
+          <li><%= submit_tag "Find User", :class => "btn btn-default" %></li>
+        <% end %>
+      </ul>
+    </div><!-- /btn-group -->
+    </div><!-- /input-group -->
+  </div>
 
 
 <%= yield %>
