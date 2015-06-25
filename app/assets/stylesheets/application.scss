@@ -242,7 +242,6 @@ nav {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8) ;
   border-bottom: 1px black solid;
-
   -moz-box-shadow: 1px 2px 5px 1px black;
   -webkit-box-shadow: 1px 2px 5px 1px black;
   box-shadow: 1px 2px 5px 1px black;
@@ -283,14 +282,17 @@ hr {
   display: inline-block;
 }
 
-.dropdown-menu-right {
+.fuck {
   text-align: center;
   right: -250px;
   top: -2px;
 }
 
-.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+ .balls {
+  right: 150px;
+ }
 
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
   right: -250px;
   top: -33.9px;
 }
@@ -347,5 +349,9 @@ h3 {
 
 .showQuotes {
   cursor: pointer;
+}
+
+.tagline {
+  color: #494949;
 }
 

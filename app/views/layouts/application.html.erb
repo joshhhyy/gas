@@ -44,6 +44,7 @@
   
   <div class="contentContainer">
 
+<<<<<<< HEAD
   <div class="searchBox">
     <div class="input-group"> 
       <%= form_tag(users_path, :method => "get", id: "search-user") do %>
@@ -59,6 +60,22 @@
     </div><!-- /btn-group -->
     </div><!-- /input-group -->
   </div>
+=======
+  
+ <div class="input-group balls"> 
+      <%= form_tag(users_path, :method => "get", id: "search-user") do %>
+       <%= text_field_tag :search, params[:search], value: params[:search], :class=>"form-control"%>
+     <div class="input-group-btn">
+       <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
+       <ul class="dropdown-menu dropdown-menu-right fuck">
+         <li><%= submit_tag "Find Post", :class => "btn btn-info" %> 
+             <% end %></li> <hr>
+         <li><%= submit_tag "Find User", :class => "btn btn-info" %></li>
+       </ul>
+     </div><!-- /btn-group -->
+   </div><!-- /input-group -->
+
+>>>>>>> al5500-master
 
 
 <%= yield %>
