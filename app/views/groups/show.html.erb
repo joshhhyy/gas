@@ -7,8 +7,13 @@
   <%= image_tag @group.avatar %>
 </p>
 <% @users.each do |user| %> 
-  <%= user.name.capitalize %> <br>
-  <i>"<%= user.tagline %>"</i> <br>
+  <%= user.name.capitalize %> -
+  <% if user.tagline %>
+    <i>"<%= user.tagline %>"</i> <br>
+  <% end %>
+  <% if user.avatar %>
+    <img src="<%= user.avatar %>">
+  <% end %>
   <%= link_to "Profile", [@group, user] %> |
   <%= link_to "Blog", group_user_posts_path(@group, user) %><br>
   <hr>
