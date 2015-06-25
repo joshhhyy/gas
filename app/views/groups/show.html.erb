@@ -13,6 +13,9 @@
       <div class="largeImage img-circle" style="background-image: url('<%= @group.avatar %>')" ></div>
     <% end %>
     <h1 class="centerText"><%= @group.name %></h1>
+    <div class="showQuotes">
+      <h5>Inpsirational quotes from this class</h5>
+    </div>
 
   </div>
 </div>
@@ -40,18 +43,23 @@
   <hr>
 <% end %>
 
-<div class="quotes">
-  <strong> <%= 'Instructor quotes' %></strong><br>
-    <% if @quotes == nil %>
-      <p>No one has added any quotes </p>
-    <% else %>
-      <%= @quotes.quote %> - <%= Group.find(@group.id).name %>
-    <% end %>
+<div class="quoteBox">
+  <div class="quotes">
+    <h2> Quotes From This Class</h2><br>
+      <% if @quotes == nil %>
+        <p>No one has added any quotes yet. Be the first!! </p>
+      <% else %>
+        <i>"<%= @quotes.quote %>"</i>
+        <br>
+        <br>
+        From <%= Group.find(@group.id).name %>
+        <hr>
+      <% end %>
+  </div>
+  <div class="quote">
+    <%= render :partial => 'quotes/form' %>
+  </div>
 </div>
-<div class="quote">
-  <%= render :partial => 'quotes/form' %>
-</div>
-
 <% if @current_user && if @current_user.admin %>
   <%= link_to 'Edit', edit_group_path(@group) %>
 <% end %>

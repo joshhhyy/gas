@@ -67,7 +67,7 @@ $(".users.show").ready(function() {
 
         var githubAvatar = $('<img>').addClass('githubAvatar').attr('src', githubAvatarUrl);
         $(githubAvatar).prependTo('.githubProfile');
-        $('<h4>Repositories</h4>').prependTo('.repositories')
+        $('<h4>Repositories</h4>').prependTo('.repos')
         $('<h4>Recent commits</h4>').prependTo('.commits')
         $('<a href="' + html_url + '">' + username + '</a>').appendTo('.githubProfile');
 

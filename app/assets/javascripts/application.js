@@ -28,8 +28,14 @@
 hljs.initHighlightingOnLoad();
 
 
-// Script for generating rich text toolbar (can be used anywhere)
+
+
 $(document).ready(function() {
+
+//Hide quotes display and new quote input on doc ready (because who needs backbone?)
+  $('.quoteBox').hide();
+
+// Script for generating rich text toolbar (can be used anywhere)
   $('.wysihtml5').each(function(i, elem) {
     $(elem).wysihtml5({
       toolbar: {
@@ -52,6 +58,17 @@ $(document).ready(function() {
 
   })
 
+// Code for showing quotes and quote input overlay
+  $(".groups.show").ready(function() {
+
+    $('.showQuotes').on('click', function(event) {
+      $('.quoteBox').fadeIn(200, function() {
+      });
+
+    })
+    
+  })
+
 // Script for parsing post content 
   $(".posts.show").ready(function() {
 
@@ -71,5 +88,8 @@ $(document).ready(function() {
 
   //   })
   // })
+
+
+
 })
 
