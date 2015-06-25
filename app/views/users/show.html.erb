@@ -26,14 +26,15 @@
   <%= @user.email %>
 </p>
 
-
-
-
+<p>
+  <%= link_to 'Linkedin profile', @user.linkedin_profile %>  
+</p>
 
 <p>
   <strong>Last active:</strong>
   <%= @user.last_active %>
 </p>
+
 
 
 <div class="socialGroup">
@@ -45,6 +46,7 @@
       <div class="repos"></div>
       <div class="commits"></div>
     </div>
+
   </div>
   <div class="linkedin">
   </div>
