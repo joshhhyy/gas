@@ -1,5 +1,5 @@
 // GitHub API variable defaults
-var reposUrl; 
+var reposUrl;
 var repoIDs = [];
 var username;
 var userCommits = [];
@@ -7,64 +7,74 @@ var allCommits;
 
 $(".users.show").ready(function() {
 
-// GITHUB API SCRIPT 
+  // GITHUB API SCRIPT 
 
   var getGithubRepos = function() {
-    $.getJSON(reposUrl, {
-    }).done(function (results) {
-      $('<p>Github Username: ' + username + '</p>').prependTo('.github');
 
-      $(results).each(function () {
-        var repo = this.name;
-        var $repoName = $('<p>').text(repo);
-        $repoName.appendTo('.github');
-        commitsUrl = "https://api.github.com/repos/" + username + "/" + repo + "/" + "commits";
-        $.getJSON(commitsUrl, {
-        }).done(function (commitResults) {
-          allCommits = commitResults;
-          $(allCommits).each(function () {
-            if (this.committer !== null) {
-              if (this.committer.login === username) {
-                userCommits.push("{" + repo + " : " + this.commit.message + "}");
-                var message = this.commit.message;
-                var $commitMessage = $('<p>').text(message);
-                $commitMessage.appendTo('.github');
-              };
-            };
-          });
-        });
-      });
-    });
+    $.getJSON(reposUrl, {
+      sort: "updated",
+    }).done(function(results) {
+
+      for (var i = 0; i < 5; i++) {
+        var repo = results[i].name;
+        var url = results[i].html_url;
+        $('<a href="' + url + '">' + repo + '</a><br>').appendTo('.repos');
+      }
+
+      $('<a href="https://github.com/' + username + '?tab=repositories">See all repos' + '</a><br>').appendTo('.repos');
+
+      commitsUrl = "https://api.github.com/repos/" + username + "/" + results[0].name + "/commits";
+      $.getJSON(commitsUrl, {}).done(function(commitResults) {
+
+        for (var x = 0; x < 5; x++) {
+          if (commitResults[x].committer !== null) {
+            if (commitResults[x].committer.login === username) {
+              userCommits.push("{" + repo + " : " + commitResults[x].commit.message + "}");
+              var message = commitResults[x].commit.message;
+              var $commitMessage = $('<p>').text(message);
+              $commitMessage.appendTo('.commits')
+            }
+          }
+        }
+
+      })
+    })
+
   };
 
-  var getGithubUser = function() {
+  var getGithub = function() {
 
-    var email = gon.user.email
-    var gitUrl = "https://api.github.com/search/users"
+    username = gon.user.github_username;
+    var gitUrl = "https://api.github.com/search/users";
 
     $.getJSON(gitUrl, {
-      q: email,
-      in: "email"
-    }).done(function (results) {
+      q: username
+    }).done(function(results) {
+      console.log(results)
       if (results.total_count < 1) {
-        var notice = $('<p>Please set your email address to public in your GitHub account settings.</p>')
+        var notice = $("<p>Either this user has not finished setting up their GAS profile or they've entered their GitHub username incorrectly (derp). </p>")
         $(notice).prependTo('.github')
       } else {
+
         var githubAvatarUrl = results.items[0].avatar_url;
         username = results.items[0].login;
         reposUrl = results.items[0].repos_url;
+        html_url = results.items[0].html_url;
+
         var githubAvatar = $('<img>').addClass('githubAvatar').attr('src', githubAvatarUrl);
-        $(githubAvatar).prependTo('.github');
+        $(githubAvatar).prependTo('.githubProfile');
+        $('<h4>Repositories</h4>').prependTo('.repositories')
+        $('<h4>Recent commits</h4>').prependTo('.commits')
+        $('<a href="' + html_url + '">' + username + '</a>').appendTo('.githubProfile');
+
         getGithubRepos();
       }
     })
   }
 
- 
+
+
 
   // API FUNCTION CALLS
-  getGithubUser();
-
-
-
+  getGithub();
 });
