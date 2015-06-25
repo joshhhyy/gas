@@ -13,6 +13,22 @@
 <!-- Navigation bar -->
  <nav>
    <a class="navLeft"><%= link_to 'GA Students Blog', root_path %></a>
+           <div class="col-lg-6">
+   <div class="input-group"> 
+
+     <%= form_tag(users_path, :method => "get", id: "search-user") do %>
+       <%= text_field_tag :search, params[:search], value: params[:search]%>
+     <div class="input-group-btn">
+       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
+       <ul class="dropdown-menu dropdown-menu-right">
+         <li><%= submit_tag "Find Post" %> 
+             <% end %></li>
+         <li><%= submit_tag "Find User" %>
+             <%# end %></li>
+       </ul>
+     </div><!-- /btn-group -->
+   </div><!-- /input-group -->
+ </div><!-- /.col-lg-6 -->
    <ul class="navRight">
        <li class="dropdown">
          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="none"></span>
@@ -38,19 +54,6 @@
  </nav>
  
  <div class="contentContainer">
-
-
-
-   <div class="dropdown">
-     <%= form_tag(posts_path, :method => "get", id: "search-post") do %>
-       <%= text_field_tag :search_posts, params[:search], value: params[:search_posts], placeholder: "Search Posts" %>
-       <%= submit_tag "Find Post" %>
-     <% end %>
-     <%= form_tag(users_path, :method => "get", id: "search-user") do %>
-       <%= text_field_tag :search_users, params[:search], value: params[:search_users], placeholder: "Search Users" %>
-       <%= submit_tag "Find User" %>
-     <% end %>
-   </div>
 
 
 <%= yield %>
