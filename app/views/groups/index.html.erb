@@ -6,7 +6,7 @@
 <% @groups.each do |group| %>
   <div class="flexBox">
     <div class="imageLinksGroup">
-      <% if group.avatar == "" %>
+      <% if group.avatar == nil %>
         <div class="thumbnailImage img-circle" style="background-image: url('/assets/avatar-default.png')" ></div>
       <% else %>
         <div class="thumbnailImage img-circle" style="background-image: url('<%= group.avatar %>')" ></div>
