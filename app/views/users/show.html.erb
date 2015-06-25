@@ -1,4 +1,24 @@
 <p id="notice"><%= notice %></p>
+<div class="flexBox">
+  <div class="imageLinksGroup">
+    <% if @user.avatar == "" %>
+      <div class="largeImage img-circle" style="background-image: url('/assets/avatar-default.png');" ></div>
+    <% else %>
+      <div class="largeImage img-circle" style="background-image: url('<%= @user.avatar %>')" ></div>
+    <% end %>
+    <br>
+    <h3><%= @user.name.capitalize %> 
+      <% if @user.tagline %>
+        <br>
+        <small><%= @user.tagline %></small> <br>
+      <% end %>
+    </h3>
+    <%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> 
+    <% if @user === @current_user %>
+      | <%= link_to 'Edit Profile', edit_group_user_path(@group, @user) %> 
+    <% end %>
+  </div>
+</div>
 
 <%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> 
 | <%= link_to "View User's Group", group_path(@group) %> 
@@ -19,14 +39,9 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <strong>Avatar:</strong>
-  <% if @user.avatar == "" %>
-    <img src="/assets/avatar-default.png">
-  <% else %>
-    <img src=<%= @user.avatar %>>
-  <% end %>
-</p>
+
+
+
 
 <p>
   <strong>Last active:</strong>
