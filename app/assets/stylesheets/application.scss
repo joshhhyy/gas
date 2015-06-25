@@ -25,6 +25,7 @@
  */
 
 
+
 .backgroundContainer {
   position: fixed;
   width: 100%;
@@ -233,15 +234,14 @@ nav .miniAvatarImage {
 
 nav {
   z-index: 100;
-  padding: 20px;
-  height: 135px;
+  padding: 0px 12px 0px 12px;
+  height: 60px;
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8) ;
   border-bottom: 1px black solid;
-
   -moz-box-shadow: 1px 2px 5px 1px black;
   -webkit-box-shadow: 1px 2px 5px 1px black;
   box-shadow: 1px 2px 5px 1px black;
@@ -270,9 +270,8 @@ hr {
 .brand {
   font-size: 30px;
   font-weight: 700;
-  text-align: center;
   vertical-align: middle;
-  line-height: 90px;
+  line-height: 60px;
 }
 
 .brand span {
@@ -283,18 +282,82 @@ hr {
   display: inline-block;
 }
 
-.dropdown-menu-right {
+.fuck {
   text-align: center;
   right: -250px;
   top: -2px;
 }
 
-.input-group {
-  // right: -780px;
-}
+ .balls {
+  right: 150px;
+ }
 
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
-
   right: -250px;
   top: -33.9px;
 }
+
+.navRight {
+  list-style-type: none;
+  margin-top: 12px;
+}
+
+a {
+  color: lightgrey;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.searchBox {
+  display: flex;
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+
+  align-items: center;
+
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+.quoteBox {
+  z-index: 100;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position:absolute;
+  top: 20%;
+  left: 50%;
+  padding: 30px;
+  border: 1px solid black;
+  -webkit-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.89);
+  -moz-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.89);
+  box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.89); 
+}
+
+.showQuotes {
+  cursor: pointer;
+}
+
+.tagline {
+  color: #494949;
+  font-style: italic;
+}
+
+.searchBox {
+  position: relative;
+  top: -76px;
+}
+

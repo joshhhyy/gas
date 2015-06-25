@@ -12,11 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :quote, 'Add a quote from your instructor' %><br>
-    <%= f.text_area :quote %>
+    <%= f.label :quote, 'Add a quote from your class' %>
+    <br><br>
+    <%= f.text_area :quote, :size => "80x10", :required => true %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class =>"btn btn-primary"%>
   </div>
 <% end %>
