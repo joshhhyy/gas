@@ -20,6 +20,19 @@
   </div>
 </div>
 
+<%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> 
+| <%= link_to "View User's Group", group_path(@group) %> 
+<% if @user === @current_user %>
+  | <%= link_to 'Edit', edit_group_user_path(@group, @user) %> 
+<% end %>
+
+<p>
+  <%= @user.name %>
+</p>
+
+<p>
+  <i>"<%= @user.tagline %>"</i>
+</p>
 
 <p>
   <strong>Email:</strong>
@@ -53,6 +66,14 @@
   <div class="twitter">
   </div>
   <div class="slack">
+ <p><%= slack %></p>
+
+  <form action="" >
+    <input type="text" name="message" placeholder="Send me a message!">
+    <button>Submit</button>
+  </form>
+
+  <%= "https://slack.com/api/chat.postMessage?token=xoxp-3171645816-4432715041-6779629751-7f66f7&channel=#{user_id}&text=#{message}&pretty=1" %>
   </div>
 </div>
 

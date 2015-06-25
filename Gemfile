@@ -21,6 +21,7 @@ gem 'jquery-rails'
 gem 'gon'
 gem 'remove_turbolinks'
 gem 'highlight_js-rails'
+gem 'httparty'
     
 group :development do
   gem 'pry-rails'

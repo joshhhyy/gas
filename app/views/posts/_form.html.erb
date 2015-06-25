@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :content %><br>
-    <%= f.text_area :content, :size => "100x20", :required => true, class: "wysihtml5", :placeholder => '<i><span class=\"wysiwyg-color-gray\">To write code, click the pen button and insert your code between:&nbsp;<br>&lt;pre&gt;&lt;code&gt; #code here# &lt;/code&gt;&lt;/pre&gt;<br><br></span></i><i><span class=\"wysiwyg-color-gray\"><br><br></span></i>' %>
+    <%= f.text_area :content, :placeholder => "To write code, click the pen and format it like this: '&lt;pre&gt;&lt;code&gt;CODE HERE&lt;/code&gt&lt;/pre&gt;' ", :size => "100x20", :required => true, class: "wysihtml5" %>
   </div>
   <div class="field">
     <%= f.label :tags %><br>

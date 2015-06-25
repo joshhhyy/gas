@@ -7,6 +7,7 @@ class SessionController < ApplicationController
     if user.present? && user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect_to root_path
+      user.update_attribute(:last_active, Time.now)
     else
       flash[:notice] = "Information Invalid."
       redirect_to login_path
