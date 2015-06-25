@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gas</title>
-  <%= include_gon %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+ <title>Gas</title>
+ <%= include_gon %>
+ <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller_name %> <%= action_name %>">
 
-  <div class="backgroundContainer"></div>
+ <div class="backgroundContainer"></div>
 <!-- Navigation bar -->
   <nav>
   <%= link_to root_path, :class => "brand" do %>
@@ -44,25 +44,28 @@
   
   <div class="contentContainer">
 
+<div class="col-lg-6">
+   <div class="input-group"> 
 
+     <%= form_tag(users_path, :method => "get", id: "search-user") do %>
+       <%= text_field_tag :search, params[:search], value: params[:search]%>
+     <div class="input-group-btn">
+       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
+       <ul class="dropdown-menu dropdown-menu-right">
+         <li><%= submit_tag "Find Post" %> 
+             <% end %></li>
+         <li><%= submit_tag "Find User" %>
+             <%# end %></li>
+       </ul>
+     </div><!-- /btn-group -->
+   </div><!-- /input-group -->
+ </div><!-- /.col-lg-6 -->
 
-
-    <div class="dropdown">
-      <%= form_tag(posts_path, :method => "get", id: "search-post") do %>
-        <%= text_field_tag :search_posts, params[:search], value: params[:search_posts], placeholder: "Search Posts" %>
-        <%= submit_tag "Find Post" %>
-      <% end %>
-      <%= form_tag(users_path, :method => "get", id: "search-user") do %>
-        <%= text_field_tag :search_users, params[:search], value: params[:search_users], placeholder: "Search Users" %>
-        <%= submit_tag "Find User" %>
-      <% end %>
-    </div>
 
 
 <%= yield %>
 
-  </div>
-
+ </div>
 
 
 </body>
