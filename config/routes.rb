@@ -43,6 +43,7 @@
 
 Rails.application.routes.draw do
 
+  resources :quotes
   get 'password_resets/new'
 
   root :to => 'groups#index'
