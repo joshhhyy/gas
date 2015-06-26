@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Group.destroy_all
 
-g1 = Group.create(:name => "WDI-9", :avatar => "https://ga-core.s3.amazonaws.com/production/uploads/program/default_image/128/thumb_WDI.png", :instructor => "Joel Turnball")
+g1 = Group.create(:name => "WDI-9", :avatar => "https://ga-core.s3.amazonaws.com/production/uploads/program/default_image/128/thumb_WDI.png", :instructor => "Joel Turnbull")
