@@ -33,7 +33,7 @@ Users, when signing up, can provide their Github, Slack and LinkedIn usernames t
 - Improved styling
 - Tag Cloud
 - Proper LinkedIn & Twitter API usage
-=======
+
 Phase 1: GA Sydney WDI students, instructors, course producers and other staff (intake WDI-10 onwards);
 
 Phase 2: GA Sydney students (etc) (WDI, FEWD, BEWD, UXDI);
