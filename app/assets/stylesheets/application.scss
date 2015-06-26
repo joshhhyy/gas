@@ -33,12 +33,12 @@
   z-index: -10;
   display: block;
   background-image: image-url('background-default.jpg');
-  -webkit-filter: grayscale(70%) opacity(40%); 
-  -moz-filter: grayscale(70%) opacity(40%); 
-  -o-filter: grayscale(70%) opacity(40%); 
-  -ms-filter: grayscale(70%) opacity(40%);  
-  -webkit-filter:  grayscale(70%) opacity(40%); 
-  filter: grayscale(70%) opacity(40%); 
+  -webkit-filter: grayscale(70%) opacity(30%); 
+  -moz-filter: grayscale(70%) opacity(30%); 
+  -o-filter: grayscale(70%) opacity(30%); 
+  -ms-filter: grayscale(70%) opacity(30%);  
+  -webkit-filter:  grayscale(70%) opacity(30%); 
+  filter: grayscale(70%) opacity(30%); 
 }
 
 .contentContainer {
@@ -303,7 +303,7 @@ hr {
 }
 
 a {
-  color: lightgrey;
+  color: #4d4d4d;
   text-decoration: none;
 }
 
@@ -328,7 +328,7 @@ h3 {
 }
 
 .quoteBox {
-  z-index: 100;
+  z-index: 1000;
   text-align: center;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.8);
@@ -338,7 +338,7 @@ h3 {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   position:absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   padding: 30px;
   border: 1px solid black;
@@ -395,6 +395,11 @@ h3 {
   padding: 10px;
 }
 
+<<<<<<< HEAD
 .github {
   border: 1px black solid;
+=======
+.brand {
+  color: whitesmoke;
+>>>>>>> al5500-master
 }
