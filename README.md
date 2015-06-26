@@ -1,19 +1,20 @@
 # Project 2: GA Student Blog ('GAS')
 
-Why 'GAS'?
-
-General Assembly Students. It's snappy. 
-
-A: “Oi, what’s your GitHub account, dude?”
-
-B: “Fuck, it’s on GAS, you shitcunt. Look it up”
-
 ### Product Overview
 GAS is a site created with the intention of providing an easy, code-friendly blogging platform for GA students; linking their classmates and alumni in one blog to view each person's progress and experience throughout the course. 
 
 Admins (Teachers and Course Producer) are given the power to add new students to existing and new classes as well as create future classes. 
 
 Users, when signing up, can provide their Github, Slack and LinkedIn usernames to display the appropriate information from each social medium via their APIs. 
+
+####Why 'GAS'?
+
+'GAS' = 'General Assembly Students'. It's snappy. 
+
+A: “Oi, what’s your GitHub account, dude?”
+
+B: “Fuck, it’s on GAS, you shitcunt. Look it up”
+
 
 ###Who is it for?
 
