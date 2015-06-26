@@ -5,6 +5,7 @@ Why 'GAS'?
 General Assembly Students. It's snappy. 
 
 A: “Oi, what’s your GitHub account, dude?”
+
 B: “Fuck, it’s on GAS, you shitcunt. Look it up”
 
 ###Idea
