@@ -40,42 +40,44 @@ Problem 3: Current students don’t necessarily know what to expect from the cou
 ### Framework
 ####Tools and languages
 - Ruby on Rails (4.2.1)
-- Javascript (vanilla & jQuery)
+- Javascript (vanilla + jQuery)
 - HTML
 - CSS
 - Ruby
 ####APIs
 - Slack
 - Github
-- LinkedIn API
 ####Gems
-- Cloudinary
-- HTTParty
-- Bootstrap
-- Wysihtml5 
-- Gon
-- Bcrypt
-- HighlightJS
-- Bootstrap
-- Font Awesome
+- Cloudinary (post attachment hosting)
+- HTTParty (temporary Slack API integration method)
+- Wysihtml5 (rich text editor)
+- Gon 
+- Bcrypt (authentication)
+- HighlightJS (blog post syntax highlighting)
+- Bootstrap (CSS - buttons, search bar, nav dropdown)
+- Font Awesome (third party icons)
+####Heroku plugins
+- SendGrid (mailer)
 
 ###Models
 
-- Locations
-- Streams
+- Locations (phase 2))
+- Streams (phase 2)
 - Groups 
 - Users
 - Posts
 - Comments
 - Quotes
-- 
+
 ### Backlog
-- Slack direct chat on user profile
-- Clearer and less dysfunctional code editor
+- Slack API integration - replace httparty with Ajax (username, avatar, teams, slackbot etc)
+- Twitter API integration
+- Clearer and less dysfunctional code editing
 - Improved styling
-- Tag Cloud
-- Proper LinkedIn & Twitter API usage
-- Additional locations and streams 
+- Logo 
+- Use of GA fonts library
+- Tag cloud
+- Locations and streams
 
 
 
