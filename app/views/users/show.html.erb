@@ -24,22 +24,14 @@
 </div>
 
 
-
-<p>
-  <%= @user.name %>
-</p>
-
-<p>
-  <i>"<%= @user.tagline %>"</i>
-</p>
-
 <p>
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
 
 <p>
-  <%= link_to 'Linkedin profile', @user.linkedin_profile %>  
+  <strong>LinkedIn:</strong>
+  <%= link_to 'View Profile', @user.linkedin_profile %>  
 </p>
 
 <p>
@@ -60,12 +52,10 @@
     </div>
 
   </div>
-  <div class="linkedin">
-  </div>
-  <div class="twitter">
-  </div>
+
   <div class="slack">
-<p>User is <b><%= slack %></b> on slack</p
+    <div class="slackHeader"><i class="fa fa-slack"></i>Slack</div>
+    <div class="slackBody"><p>User is currently <b><%= slack %></b> on slack</p</div>
 
   <form>
     <input type="text" name="message" placeholder="Say hi on Slack!" id="field">
