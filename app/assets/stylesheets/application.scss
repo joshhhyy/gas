@@ -35,12 +35,12 @@ body {
   z-index: -10;
   display: block;
   background-image: image-url('background-default.jpg');
-  -webkit-filter: grayscale(70%) opacity(70%); 
-  -moz-filter: grayscale(70%) opacity(70%); 
-  -o-filter: grayscale(70%) opacity(70%); 
-  -ms-filter: grayscale(70%) opacity(70%);  
-  -webkit-filter:  grayscale(70%) opacity(70%); 
-  filter: grayscale(70%) opacity(70%); 
+  -webkit-filter: grayscale(70%) opacity(40%); 
+  -moz-filter: grayscale(70%) opacity(40%); 
+  -o-filter: grayscale(70%) opacity(40%); 
+  -ms-filter: grayscale(70%) opacity(40%);  
+  -webkit-filter:  grayscale(70%) opacity(40%); 
+  filter: grayscale(70%) opacity(40%); 
 }
 
 .contentContainer {
@@ -387,5 +387,13 @@ h3 {
 .comments {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
+
+.wysihtml5-toolbar {
+  list-style-type: none;
+  margin: 0px;
+}
+
+.wysihtml5-toolbar li{
+  display: inline; 
 }
 
