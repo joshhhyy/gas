@@ -65,7 +65,7 @@ $(".users.show").ready(function() {
         reposUrl = results.items[0].repos_url;
         html_url = results.items[0].html_url;
 
-        var githubAvatar = $('<img>').addClass('githubAvatar').attr('src', githubAvatarUrl);
+        var githubAvatar = $('<img>').addClass('miniAvatarImage img-rounded').attr('src', githubAvatarUrl);
         $(githubAvatar).prependTo('.githubProfile');
         $('<h4>Repositories</h4>').prependTo('.repos')
         $('<h4>Recent commits</h4>').prependTo('.commits')
