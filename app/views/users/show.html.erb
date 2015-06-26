@@ -12,7 +12,7 @@
         <br>
       <% else %>
         <br>
-        <small><%= @user.tagline %></small> <br>
+        <i><small>"<%= @user.tagline %>"</small></i> <br>
       <% end %>
     </h2>
 <%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> 
@@ -65,7 +65,7 @@
   <div class="twitter">
   </div>
   <div class="slack">
- <p><%= slack %></p>
+<p>User is <b><%= slack %></b> on slack</p
 
   <form>
     <input type="text" name="message" placeholder="Say hi on Slack!" id="field">
