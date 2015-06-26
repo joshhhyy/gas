@@ -16,6 +16,7 @@
   <%= link_to root_path, :class => "brand" do %>
     GAS
   <% end %>
+
   
     <ul class="navRight">
         <li class="dropdown">
@@ -26,6 +27,7 @@
               <div class="miniAvatarImage img-circle" style="background-image: url('/assets/avatar-default.png');"></div> 
             <% end %>
           </a>
+
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <% if @current_user.present? %>
               <li><%= link_to 'New Blog Post', new_group_user_post_path(@current_user.group_id, @current_user.id) %></li>
@@ -40,24 +42,27 @@
           </ul>
         </li>
       </ul>
+          <div class="searchBox">
+            <div class="input-group balls"> 
+              <%= form_tag(users_path, :method => "get", id: "search-user") do %>
+              <%= text_field_tag :search, params[:search], value: params[:search], :class=>"form-control"%>
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
+                <ul class="dropdown-menu dropdown-menu-right fuck">
+                  <li><%= submit_tag "Find Post", :class => "btn btn-info" %> 
+                  <% end %>
+                  </li> 
+                  <hr>
+                  <li><%= submit_tag "Find User", :class => "btn btn-info" %></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /input-group -->
+          </div>
   </nav>
   
 <div class="contentContainer">
 
-  <div class="searchBox">
-    <div class="input-group balls"> 
-        <%= form_tag(users_path, :method => "get", id: "search-user") do %>
-         <%= text_field_tag :search, params[:search], value: params[:search], :class=>"form-control"%>
-       <div class="input-group-btn">
-         <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
-         <ul class="dropdown-menu dropdown-menu-right fuck">
-           <li><%= submit_tag "Find Post", :class => "btn btn-info" %> 
-               <% end %></li> <hr>
-           <li><%= submit_tag "Find User", :class => "btn btn-info" %></li>
-         </ul>
-       </div><!-- /btn-group -->
-     </div><!-- /input-group -->
-  </div>
+
 
 <%= yield %>
 

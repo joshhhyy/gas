@@ -7,24 +7,23 @@
       <div class="largeImage img-circle" style="background-image: url('<%= @user.avatar %>')" ></div>
     <% end %>
     <br>
-    <h3><%= @user.name.capitalize %> 
-      <% if @user.tagline %>
+    <h2><%= @user.name.capitalize %> 
+      <% if @user.tagline == nil %>
         <br>
-        <small><%= @user.tagline %></small> <br>
+      <% else %>
+        <br>
+        <i><small>"<%= @user.tagline %>"</small></i> <br>
       <% end %>
-    </h3>
-    <%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> 
-    <% if @user === @current_user %>
-      | <%= link_to 'Edit Profile', edit_group_user_path(@group, @user) %> 
-    <% end %>
+    </h2>
+<%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> 
+| <%= link_to "View Group", group_path(@group) %> 
+<% if @user === @current_user %>
+  | <%= link_to 'Edit Profile', edit_group_user_path(@group, @user) %> 
+<% end %>
   </div>
 </div>
 
-<%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> 
-| <%= link_to "View User's Group", group_path(@group) %> 
-<% if @user === @current_user %>
-  | <%= link_to 'Edit', edit_group_user_path(@group, @user) %> 
-<% end %>
+
 
 <p>
   <%= @user.name %>
@@ -66,7 +65,7 @@
   <div class="twitter">
   </div>
   <div class="slack">
- <p><%= slack %></p>
+<p>User is <b><%= slack %></b> on slack</p
 
   <form>
     <input type="text" name="message" placeholder="Say hi on Slack!" id="field">
