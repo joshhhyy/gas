@@ -20,6 +20,7 @@
 <% if @user === @current_user %>
   | <%= link_to 'Edit Profile', edit_group_user_path(@group, @user) %> 
 <% end %>
+<hr>
   </div>
 </div>
 
@@ -45,6 +46,7 @@
 
   <div class="github">
     <div class="githubHeader"><i class="fa fa-github-square"></i>Github</div>
+    <hr>
     <div class="githubBody">
       <div class="githubProfile"></div>
       <div class="repos"></div>
@@ -54,9 +56,9 @@
   </div>
 
   <div class="slack">
-    <div class="slackHeader"><i class="fa fa-slack"></i>Slack</div>
-    <div class="slackBody"><p>User is currently <b><%= slack %></b> on slack</p</div>
-
+    <div class="slackHeader"><i class="fa fa-slack"></i>Slack</div><hr>
+    <div class="slackBody"><p>User is currently <b><%= slack %></b> on slack</p></div>
+    <hr>
   <form>
     <input type="text" name="message" placeholder="Say hi on Slack!" id="field">
     <button id="submit">Submit</button>

@@ -243,9 +243,9 @@ nav {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8) ;
   border-bottom: 1px black solid;
-  -moz-box-shadow: 1px 2px 5px 1px black;
-  -webkit-box-shadow: 1px 2px 5px 1px black;
-  box-shadow: 1px 2px 5px 1px black;
+  -moz-box-shadow: 0px 2px 5px 1px black;
+  -webkit-box-shadow: 0px 2px 5px 1px black;
+  box-shadow: 0px 2px 5px 1px black;
 
 }
 
@@ -399,10 +399,13 @@ h3 {
 .github {
   display: inline-block;
   width: 350px;
+  height: 100%;
   border: 1px black solid;
+  border-radius: 5px;
   padding: 20px;
-  margin: 10px;
+  margin-right: 10px;
   vertical-align: top;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .slack {
@@ -410,10 +413,31 @@ h3 {
   width: 350px;
   height: 100%;
   border: 1px black solid;
+  border-radius: 5px;
+  padding: 20px;
+  vertical-align: top;
+  background-color: rgba(255, 255, 255, 0.4);
 }
+
+.slackHeader {
+  font-size: 36px;
+}  
+
+.githubHeader {
+  font-size: 36px;
+}  
+
 .brand {
   color: whitesmoke;
   padding: 20px;
   margin: 10px;
   vertical-align: top;
+}
+
+.fa {
+  font-size: 40px;
+}
+
+.githubProfile a {
+  font-size: 20px;
 }

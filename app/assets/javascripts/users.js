@@ -21,7 +21,7 @@ $(".users.show").ready(function() {
         $('<a href="' + url + '">' + repo + '</a><br>').appendTo('.repos');
       }
 
-      $('<a href="https://github.com/' + username + '?tab=repositories">See all repos' + '</a><br>').appendTo('.repos');
+      $('<a href="https://github.com/' + username + '?tab=repositories">See all repos' + '</a><br><hr>').appendTo('.repos');
 
       commitsUrl = "https://api.github.com/repos/" + username + "/" + results[0].name + "/commits";
       $.getJSON(commitsUrl, {}).done(function(commitResults) {
@@ -69,7 +69,7 @@ $(".users.show").ready(function() {
         $(githubAvatar).prependTo('.githubProfile');
         $('<h4>Repositories</h4>').prependTo('.repos')
         $('<h4>Recent commits</h4>').prependTo('.commits')
-        $('<a href="' + html_url + '">' + username + '</a>').appendTo('.githubProfile');
+        $('<a href="' + html_url + '">' + username + '</a><hr>').appendTo('.githubProfile');
 
         getGithubRepos();
       }
