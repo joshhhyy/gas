@@ -14,7 +14,7 @@
       <div class="largeImage img-circle" style="background-image: url('<%= @group.avatar %>')" ></div>
     <% end %>
     <h1 class="centerText"><%= @group.name %></h1>
-    <div class="showQuotes">
+    <div class="showQuotes btn btn-default">
       <h5>Inpsirational quotes from this class</h5>
     </div>
 
@@ -53,8 +53,7 @@
       <% else %>
         <i>"<%= @quotes.quote %>"</i>
         <br>
-        <br>
-        From <%= Group.find(@group.id).name %>
+
         <hr>
       <% end %>
   </div>
