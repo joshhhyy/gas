@@ -1,4 +1,4 @@
-# GA Student Blog ('GAS')
+# Project 2: GA Student Blog ('GAS')
 
 Why 'GAS'?
 
@@ -8,22 +8,22 @@ A: “Oi, what’s your GitHub account, dude?”
 
 B: “Fuck, it’s on GAS, you shitcunt. Look it up”
 
-###Idea
+### Product Overview
+GAS is a site created with the intention of providing an easy, code-friendly blogging platform for GA students; linking their classmates and alumni in one blog to view each person's progress and experience throughout the course. 
 
-A blog site for GA students and alumni to: 
+Admins (Teachers and Course Producer) are given the power to add new students to existing and new classes as well as create future classes. 
 
-Post about their progress and experiences during the course;
-Post about their experiences finding and working a job after the course (for the benefit of recent alumni and future students);
-Find each others’ social/professional sites (GitHub, LinkedIn, Twitter, Facebook (lol).
+Users, when signing up, can provide their Github, Slack and LinkedIn usernames to display the appropriate information from each social medium via their APIs. 
 
 ###Who is it for?
 
-Phase 1: GA Sydney WDI students (intake WDI-10 onwards);
+Phase 1: GA Sydney WDI students, instructors, course producers and other staff (intake WDI-10 onwards);
 
-Phase 2: GA Sydney students (WDI, FEWD, BEWD, UXDI);
+Phase 2: GA Sydney students (etc) (WDI, FEWD, BEWD, UXDI);
 
-Phase 3: GA global students;
-What problem does it address?
+Phase 3: GA global students (etc);
+
+###What problem does it address?
 
 Problem 1: Everyone’s encouraged to start a blog at the beginning of the course, and most people intend to, but few people actually do, and most people who don’t regret it. This remove a few barriers to students starting their blogs, such as: “what format should my blog take?”, “what site should I use?”. It will also allow users to see what their fellow students (and past alumni) have written about, giving them inspiration and motivation to post. 
 
@@ -31,19 +31,10 @@ Problem 2: Students don’t have a central location to find out their classmates
 
 Problem 3: Current students don’t necessarily know what to expect from the course or what to expect once they finish the course. The blog will allow students to see what alumni have done since finishing the course, and allow alumni to see what current students are up to.
 
-#Project 2: GA Student Blog (GAS)
-
 ### Group
 - Chris Barnaby
 - Josh Bonador
 - Alan Wright
-
-### Overview
-GAS is a site created with the intention of providing an easy, code-friendly blogging platform for GA students; linking their classmates and alumni in one blog to view each person's progress and experience throughout the course. 
-
-Admins (Teachers and Course Producer) are given the power to add new students to existing and new classes as well as create future classes. 
-
-Users, when signing up, can provide their Github, Slack and LinkedIn usernames to display the appropriate information from each social medium via their APIs. 
 
 ### Framework
 ####Tools and languages
@@ -67,14 +58,6 @@ Users, when signing up, can provide their Github, Slack and LinkedIn usernames t
 - Bootstrap
 - Font Awesome
 
-### Backlog
-- Slack direct chat on user profile
-- Clearer and less dysfunctional code editor
-- Improved styling
-- Tag Cloud
-- Proper LinkedIn & Twitter API usage
-- Additional locations and streams 
-
 ###Models
 
 - Locations
@@ -84,4 +67,14 @@ Users, when signing up, can provide their Github, Slack and LinkedIn usernames t
 - Posts
 - Comments
 - Quotes
+- 
+### Backlog
+- Slack direct chat on user profile
+- Clearer and less dysfunctional code editor
+- Improved styling
+- Tag Cloud
+- Proper LinkedIn & Twitter API usage
+- Additional locations and streams 
+
+
 
