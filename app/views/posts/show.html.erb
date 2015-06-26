@@ -4,6 +4,7 @@
 <%= link_to 'Edit Post', edit_group_user_post_path(@group, @user, @post) %> 
 
 <div class="post">
+
   <p class="parseMe">
   </p>
 
@@ -25,8 +26,9 @@
   <p>
     <%= cl_image_tag(@post.cl_id) %>
   </p>
-</div>
+
 <hr>
+</div>
 
 <div class="comments">
   <h1 class="commentHead"><strong> <%= 'Comments' %></strong></h1><br>
