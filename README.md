@@ -20,3 +20,10 @@ Users, when signing up, can provide their Github, Slack and LinkedIn usernames t
 - HTTParty
 - Bootstrap
 - Wysihtml5 
+
+### Features to be completed
+- Slack direct chat on user profile
+- Clearer and less dysfunctional code editor
+- Improved styling
+- Tag Cloud
+- Proper LinkedIn & Twitter API usage
