@@ -371,3 +371,12 @@ h3 {
   cursor: pointer;
 }
 
+.wysihtml5-toolbar {
+  list-style-type: none;
+  margin: 0px;
+}
+
+.wysihtml5-toolbar li{
+  display: inline; 
+}
+
