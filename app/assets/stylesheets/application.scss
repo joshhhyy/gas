@@ -341,7 +341,7 @@ h3 {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   position:absolute;
-  top: 50%;
+  top: 260px;
   left: 50%;
   padding: 30px;
   border: 1px solid black;
@@ -413,10 +413,6 @@ h3 {
   padding: 10px;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3c13201d3f8bf4748a2faad424cd7a238f6aa9ac
 .github {
   display: inline-block;
   width: 350px;
@@ -431,11 +427,10 @@ h3 {
   width: 350px;
   height: 100%;
   border: 1px black solid;
+}
+.brand {
+  color: whitesmoke;
   padding: 20px;
   margin: 10px;
   vertical-align: top;
-}
-
-.brand {
-  color: whitesmoke;
 }
