@@ -10,7 +10,7 @@
     <h3><%= @user.name.capitalize %> 
       <% if @user.tagline %>
         <br>
-        <small><%= @user.tagline %></small> <br>
+        <i><small>"<%= @user.tagline %>"</small></i> <br>
       <% end %>
     </h3>
     <%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> 
