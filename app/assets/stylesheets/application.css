@@ -29,11 +29,7 @@
   src: url(font-path('PFDinDisplayPro-Bold.ttf')) format('truetype')
 }
 
-.gaLogo {
-  width: 300px;
-  position: fixed;
-  top: 15px;
-}
+
 .backgroundContainer {
   position: fixed;
   width: 100%;
@@ -449,8 +445,6 @@ h3 {
   font-size: 20px;
 }
 
-
-
 .btn-group {
   text-align: center;
   top: 15px;
@@ -464,4 +458,10 @@ ul.dropdown-menu {
 ul.dropdown-menu a:hover {
   background-color: #5bc0de;
   color: white;
+}
+
+.gaLogo {
+  width: 300px;
+  position: fixed;
+  top: 15px;
 }
