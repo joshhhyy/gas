@@ -12,7 +12,7 @@
  <div class="backgroundContainer"></div>
 <!-- Navigation bar -->
   <nav>
-    <%= link_to(image_tag("images/galogo.png", :alt =>  "GAS", :class =>"gaLogo"), root_path) %>
+    <%= link_to(image_tag("assets/images/galogo.png", :alt =>  "GAS", :class =>"gaLogo"), root_path) %>
     <div class="classDropwdown">
       <div class="btn-group">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,7 +47,7 @@
             <% if @current_user.present? %>
               <div class="miniAvatarImage img-circle" style="background-image: url('<%= @current_user.avatar %>')"></div>
             <% else %>
-              <div class="miniAvatarImage img-circle" style="background-image: url('/assets/avatar-default.png');"></div> 
+              <div class="miniAvatarImage img-circle" style="background-image: url('/assets/images/avatar-default.png');"></div> 
             <% end %>
           </a>
 
