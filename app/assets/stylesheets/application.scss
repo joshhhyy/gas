@@ -262,6 +262,7 @@ nav {
   right: 0px;
   display: inline-block;
   vertical-align: right;
+  top: 0px;
 }
 
 hr {
@@ -309,7 +310,7 @@ a {
 }
 
 a:hover {
-  color: red;
+  color: white;
   text-decoration: none;
 }
 
@@ -440,4 +441,26 @@ h3 {
 
 .githubProfile a {
   font-size: 20px;
+}
+
+.gaLogo {
+  width: 20%;
+  position: fixed;
+  top: 15px;
+}
+
+.btn-group {
+  text-align: center;
+  position: fixed;
+  top: 15px;
+  left: 920px;
+}
+
+ul.dropdown-menu {
+  text-align: center;
+}
+
+ul.dropdown-menu a:hover {
+  background-color: #5bc0de;
+  color: white;
 }
