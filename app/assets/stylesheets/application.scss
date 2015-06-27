@@ -28,6 +28,12 @@
   font-family: 'PFDinDisplayPro-Bold';
   src: url(font-path('PFDinDisplayPro-Bold.ttf')) format('truetype')
 }
+
+.gaLogo {
+  width: 300px;
+  position: fixed;
+  top: 15px;
+}
 .backgroundContainer {
   position: fixed;
   width: 100%;
@@ -443,11 +449,7 @@ h3 {
   font-size: 20px;
 }
 
-.gaLogo {
-  width: 300px;
-  position: fixed;
-  top: 15px;
-}
+
 
 .btn-group {
   text-align: center;
