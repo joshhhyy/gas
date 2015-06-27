@@ -24,8 +24,10 @@
  *= require highlight_js/github
  */
 
-
-
+@font-face {
+  font-family: 'PFDinDisplayPro-Bold';
+  src: url(font-path('PFDinDisplayPro-Bold.ttf')) format('truetype')
+}
 .backgroundContainer {
   position: fixed;
   width: 100%;
@@ -270,18 +272,16 @@ hr {
 }
 
 .brand {
-  font-size: 30px;
+  font-family: 'PFDinDisplayPro-Bold', impact;
+  font-size: 55px;
   font-weight: 700;
   vertical-align: middle;
   line-height: 60px;
+
 }
 
 .brand span {
-   line-height: 90px;
-}
-
-.social {
-  display: inline-block;
+   line-height: 92px;
 }
 
 .fuck {
