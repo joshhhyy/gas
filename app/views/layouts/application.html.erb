@@ -12,20 +12,30 @@
  <div class="backgroundContainer"></div>
 <!-- Navigation bar -->
   <nav>
-  <div class="img-square" style="background-image: url('/gas.png');"></div> 
-  <%= link_to root_path, :class => "brand" do %>
-    GAS
-  <% end %>
-
-           <div class="searchBox">
-            <div class="input-group balls"> 
-              <%= form_tag(users_path, :method => "get", id: "search-user") do %>
-              <%= text_field_tag :search, params[:search], value: params[:search], :class=>"form-control"%>
-              <div class="input-group-btn">
-                <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
+    <a href="/">
+      <img src="https://ga-core-production-herokuapp-com.global.ssl.fastly.net/assets/ga-lockup-f8e87c0d104030ad3d0420718b424f34.png" alt="GAS" class="gaLogo">
+    </a>
+    <div class="classDropwdown">
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Classes <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="/groups/1">WDI-9</a></li>
+          <hr>
+          <li><a href="/groups/2">WDI-10</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="searchBox">
+      <div class="input-group balls"> 
+        <%= form_tag(users_path, :method => "get", id: "search-user") do %>
+          <%= text_field_tag :search, params[:search], value: params[:search], :class=>"form-control"%>
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
                 <ul class="dropdown-menu dropdown-menu-right fuck">
                   <li><%= submit_tag "Find Post", :class => "btn btn-info" %> 
-                  <% end %>
+        <% end %>
                   </li> 
                   <hr>
                   <li><%= submit_tag "Find User", :class => "btn btn-info" %></li>
@@ -56,7 +66,7 @@
             <% end %>
           </ul>
         </li>
-      </ul>
+    </ul>
  
   </nav>
   
