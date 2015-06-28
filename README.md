@@ -18,24 +18,24 @@ B: “Fuck, it’s on GAS, you shitcunt. Look it up”
 
 ###Who is it for?
 
-Phase 1: GA Sydney WDI students, instructors, course producers and other staff (intake WDI-10 onwards);
+**Phase 1:** GA Sydney WDI students, alumni, instructors, course producers and outcomes producers (intake WDI-10 onwards);
 
-Phase 2: GA Sydney students (etc) (WDI, FEWD, BEWD, UXDI);
+**Phase 2:** GA Sydney students, alumni, instructors, course producers and outcomes producers (WDI, FEWD, BEWD, UXDI);
 
-Phase 3: GA global students (etc);
+**Phase 3:** GA Global students, alumni, instructors, course producers and outcomes producers.
 
 ###What problem does it address?
 
-Problem 1: Everyone’s encouraged to start a blog at the beginning of the course, and most people intend to, but few people actually do, and most people who don’t regret it. This remove a few barriers to students starting their blogs, such as: “what format should my blog take?”, “what site should I use?”. It will also allow users to see what their fellow students (and past alumni) have written about, giving them inspiration and motivation to post. 
+**Problem 1**: Everyone’s encouraged to start a blog at the beginning of the course, and most people intend to, but few people actually do, and those who don’t generally regret it. This removes a few barriers to students starting their blogs, such as: “what format should my blog take?”, “what site should I use?”. It will also allow users to see what their fellow students (and past alumni) have written about, giving them inspiration and motivation to post. 
 
-Problem 2: Students don’t have a central location to find out their classmates’ professional/social accounts. GitHub, Twitter, LinkedIn and Facebook account details. User profiles will give students access to all their classmates’ social/professional profiles/sites.
+**Problem 2**: Students don’t have a central location to find out their classmates’ professional/social accounts. GitHub, Twitter, LinkedIn and Facebook account details. User profiles will give students access to all their classmates’ social/professional profiles/sites.
 
-Problem 3: Current students don’t necessarily know what to expect from the course or what to expect once they finish the course. The blog will allow students to see what alumni have done since finishing the course, and allow alumni to see what current students are up to.
+**Problem 3**: Current students don’t necessarily know what to expect from the course or what to expect once they finish the course. The blog will allow students to see what alumni have done since finishing the course, and allow alumni to see what current students are up to.
 
 ### Group
-- Chris Barnaby
-- Josh Bonador
-- Alan Wright
+- Chris Barnaby;
+- Josh Bonador;
+- Alan Wright.
 
 ### Framework
 ####Tools and languages
@@ -44,9 +44,11 @@ Problem 3: Current students don’t necessarily know what to expect from the cou
 - HTML
 - CSS
 - Ruby
+
 ####APIs
 - Slack
 - Github
+
 ####Gems
 - Cloudinary (post attachment hosting)
 - HTTParty (temporary Slack API integration method)
@@ -56,28 +58,55 @@ Problem 3: Current students don’t necessarily know what to expect from the cou
 - HighlightJS (blog post syntax highlighting)
 - Bootstrap (CSS - buttons, search bar, nav dropdown)
 - Font Awesome (third party icons)
+
 ####Heroku plugins
 - SendGrid (mailer)
 
 ###Models
 
-- Locations (phase 2))
-- Streams (phase 2)
-- Groups 
-- Users
-- Posts
-- Comments
-- Quotes
+- Locations *(phase 2)*): 
+  - Has many streams
+  - Has many groups through streams
+- Streams *(phase 2)*:
+  - Belongs to location
+  - Has many groups 
+  - Has many users through groups
+- Groups:
+  - Belongs to stream *(phase 2)*
+  - Has many users
+  - Has many posts through users
+  - Has many quotes
+- Users:
+  - Belongs to group
+  - Has many posts
+  - Has many comments through posts
+- Posts:
+  - Belongs to user
+  - Has many comments
+- Comments:
+  - Belongs to user
+- Quotes:
+  - Belongs to group 
 
 ### Backlog
-- Slack API integration - replace httparty with Ajax (username, avatar, teams, slackbot etc)
-- Twitter API integration
-- Clearer and less dysfunctional code editing
-- Improved styling
-- Logo 
-- Use of GA fonts library
-- Tag cloud
-- Locations and streams
+- Slack API integration - use Ajax, not httparty (get username, avatar, teams, online status, slackbot DM).
+- Twitter API integration (get handle, followers, following, avatar).
+- Improved code-snippet entry functionality on posts.
+- Improved visual design and styling.
+- GAS logo/branding.
+- Selective use of GA fonts (eg, nav bar only?)
+- Tag cloud & canned search.
+- Implementation of locations and streams models (and change root).
+- Responsive design.
+- Backbone implementation of quotes feature (to allow 'get another quote' without page reload).
+- Footer. 
+- 'Last active' logic on user profile should use session date/time, not user object instance 'updated_at'.
+- Extend admin/restrict non-admin permissions:
+  - Quotes views - index and destroy (admin only).
+- Extend mailer: 
+  - Notify group admin of new users, new groups.
+  - Welcome email for new users.
+- Informative root page content (what is GAS, who is it for, etc).
 
 
 
