@@ -107,6 +107,7 @@ B: “Fuck, it’s on GAS, you shitcunt. Look it up”
   - Notify group admin of new users, new groups.
   - Welcome email for new users.
 - Informative root page content (what is GAS, who is it for, etc).
+- Informative error messaging (w/ 'report' link to issues page in github repo)
 
 
 
