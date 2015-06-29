@@ -445,10 +445,17 @@ h3 {
   font-size: 20px;
 }
 
-.btn-group {
-  text-align: center;
-  top: 15px;
+// .btn-group {
+//   position: static;
+//   text-align: center;
+//   top: 15px;
+//   left: 760px;
+// }
+
+#b-classes {
+  position: absolute;
   left: 760px;
+  top:5px;
 }
 
 ul.dropdown-menu {
