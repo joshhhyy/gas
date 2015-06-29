@@ -28,6 +28,8 @@
   font-family: 'PFDinDisplayPro-Bold';
   src: url(font-path('PFDinDisplayPro-Bold.ttf')) format('truetype')
 }
+
+
 .backgroundContainer {
   position: fixed;
   width: 100%;
@@ -443,18 +445,18 @@ h3 {
   font-size: 20px;
 }
 
-.gaLogo {
-  width: 20%;
-  position: fixed;
+// .btn-group {
+//   position: static;
+//   text-align: center;
+//   top: 15px;
+//   left: 760px;
+// }
+.classDropdown {
+  position: absolute;
+  right: 420px;
   top: 15px;
 }
 
-.btn-group {
-  text-align: center;
-  position: fixed;
-  top: 15px;
-  left: 920px;
-}
 
 ul.dropdown-menu {
   text-align: center;
@@ -463,4 +465,10 @@ ul.dropdown-menu {
 ul.dropdown-menu a:hover {
   background-color: #5bc0de;
   color: white;
+}
+
+.gaLogo {
+  width: 300px;
+  position: fixed;
+  top: 15px;
 }

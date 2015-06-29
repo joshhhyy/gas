@@ -3,7 +3,7 @@
 <head>
  <title>Gas</title>
  <%= include_gon %>
- <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+ <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
  <%= csrf_meta_tags %>
 </head>
@@ -12,10 +12,8 @@
  <div class="backgroundContainer"></div>
 <!-- Navigation bar -->
   <nav>
-    <a href="/">
-      <img src="https://ga-core-production-herokuapp-com.global.ssl.fastly.net/assets/ga-lockup-f8e87c0d104030ad3d0420718b424f34.png" alt="GAS" class="gaLogo">
-    </a>
-    <div class="classDropwdown">
+    <%= link_to(image_tag("galogo.png", :alt =>  "GAS", :class =>"gaLogo", :style => "width: 300px"), root_path) %>
+    <div class="classDropdown">
       <div class="btn-group">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Classes <span class="caret"></span>
@@ -49,7 +47,7 @@
             <% if @current_user.present? %>
               <div class="miniAvatarImage img-circle" style="background-image: url('<%= @current_user.avatar %>')"></div>
             <% else %>
-              <div class="miniAvatarImage img-circle" style="background-image: url('/assets/avatar-default.png');"></div> 
+              <div class="miniAvatarImage img-circle" style="background-image: url('/assets/images/avatar-default.png');"></div> 
             <% end %>
           </a>
 
