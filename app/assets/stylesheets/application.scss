@@ -28,6 +28,8 @@
   font-family: 'PFDinDisplayPro-Bold';
   src: url(font-path('PFDinDisplayPro-Bold.ttf')) format('truetype')
 }
+
+
 .backgroundContainer {
   position: fixed;
   width: 100%;
@@ -264,6 +266,7 @@ nav {
   right: 0px;
   display: inline-block;
   vertical-align: right;
+  top: 0px;
 }
 
 hr {
@@ -309,7 +312,7 @@ a {
 }
 
 a:hover {
-  color: red;
+  color: white;
   text-decoration: none;
 }
 
@@ -440,4 +443,32 @@ h3 {
 
 .githubProfile a {
   font-size: 20px;
+}
+
+// .btn-group {
+//   position: static;
+//   text-align: center;
+//   top: 15px;
+//   left: 760px;
+// }
+.classDropdown {
+  position: absolute;
+  right: 420px;
+  top: 15px;
+}
+
+
+ul.dropdown-menu {
+  text-align: center;
+}
+
+ul.dropdown-menu a:hover {
+  background-color: #5bc0de;
+  color: white;
+}
+
+.gaLogo {
+  width: 300px;
+  position: fixed;
+  top: 15px;
 }
