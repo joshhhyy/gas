@@ -1,5 +1,7 @@
 # Project 2: GA Student Blog ('GAS')
 
+[GAS on Heroku](https://gas-ga.herokuapp.com)
+
 ### Product Overview
 GAS is a site created with the intention of providing an easy, code-friendly blogging platform for GA students; linking their classmates and alumni in one blog to view each person's progress and experience throughout the course. 
 
