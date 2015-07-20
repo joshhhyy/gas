@@ -90,30 +90,35 @@ B: “Mate, why do you keep asking people that? It’s on GAS. Look it up”
 - Quotes:
   - Belongs to group 
 
-### Backlog
-- Slack API integration - use Ajax, not httparty (get username, avatar, teams, online status, slackbot DM).
-- Twitter API integration (get handle, followers, following, avatar).
-- Improved code-snippet entry functionality on posts.
-- Profile page styling.
-- Quotes - currently displaying quotes from ALL classes (not just current class).
-- Search bar and button styling (mobile-friendly - break to display:block).
-- All pages - avatars should be clickable links (eg on class index, to class; on class view, to user profile). 
-- Improved visual design and styling.
-- GAS logo/branding. (just GA logo, then "Student Blog"?).
-- Selective use of GA fonts (eg, nav bar only?)
-- Tag cloud & canned search.
-- Implementation of locations and streams models (and change root).
-- Responsive design.
-- Backbone implementation of quotes feature (to allow 'get another quote' without page reload).
-- Footer. 
-- 'Last active' logic on user profile should use session date/time, not user object instance 'updated_at'.
-- Extend admin/restrict non-admin permissions:
-  - Quotes views - index and destroy (admin only).
-- Extend mailer: 
-  - Notify group admin of new users, new groups.
+### Sprint 2 (for Meet & Greet)
+
+
+- *ALFIE -* Twitter API integration (get handle, followers, following, avatar).
+- *ALFIE -* Quotes - currently displaying quotes from ALL classes (not just current class).
+- *ALFIE -* All pages - avatars should be clickable links (eg on class index, to class; on class view, to user profile). 
+- *ALFIE -* Backbone implementation of quotes feature (to allow 'get another quote' without page reload).
+- *ALFIE -* Admin / routes - restict non-admin permissions (eg quotes index and show views, etc).
+- *ALFIE -* Additional mailers:
   - Welcome email for new users.
-- Informative root page content (what is GAS, who is it for, etc).
+
+- *BADGER -* Improved code-snippet entry functionality on posts.
+- *BADGER -* Profile page styling.
+- *BADGER -* Informative root page content (what is GAS, who is it for, etc).
+- *BADGER -* Tag cloud & canned search.
+
+- *J-BON -* Selective use of GA fonts (eg, nav bar only?)
+- *J-BON -* Footer. 
+- *J-BON -* 'Last active' logic on user profile should use session date/time. Not working?
+- *J-BON -* Slack API integration - AJAX (get username, avatar, teams(?), online status, slackbot DM).
+
+### Backlog
+
 - Informative error messaging (w/ 'report' link to issues page in github repo)
 - New user - admin only?
+- Search bar and button styling (mobile-friendly - break to display:block).
+- Implementation of locations and streams models (and change root).
+- Responsive design.
+- Improved visual design and styling.
+- GAS logo/branding. (just GA logo, then "Student Blog"?).
 
 
