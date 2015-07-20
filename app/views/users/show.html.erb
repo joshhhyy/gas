@@ -30,20 +30,22 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <strong>LinkedIn:</strong>
-  <%= link_to 'View Profile', @user.linkedin_profile %>  
-</p>
-
-<p>
-  <strong>Last active:</strong>
-  <%= @user.last_active %>
-</p>
-
+<% if @user.linkedin_profile.present? %>
+  <p>
+    <strong>LinkedIn:</strong>
+    <%= link_to 'View Profile', @user.linkedin_profile %>  
+  </p>
+<% end %>
+<% if @user.last_active.present? %>
+  <p>
+    <strong>Last active:</strong>
+    <%= @user.last_active.strftime "%b %e, %l:%M %p" %>
+  </p>
+<% end %>
 
 
 <div class="socialGroup">
-
+<% if @user.github_username.present? %>
   <div class="github">
     <div class="githubHeader"><i class="fa fa-github-square"></i>Github</div>
     <hr>
@@ -52,9 +54,9 @@
       <div class="repos"></div>
       <div class="commits"></div>
     </div>
-
   </div>
-
+<% end %>
+<% if @user.slack_username.present? %>
   <div class="slack">
     <div class="slackHeader"><i class="fa fa-slack"></i>Slack</div><hr>
     <div class="slackBody"><p>User is currently <b><%= slack %></b> on slack</p></div>
@@ -63,10 +65,10 @@
     <input type="text" name="message" placeholder="Say hi on Slack!" id="field">
     <button id="submit">Submit</button>
   </form>
-
+<% end %>
 <!-- Put Josh's code back here -->
-
   </div>
+
 </div>
   
 
