@@ -95,10 +95,11 @@ B: “Fuck, it’s on GAS, you shitcunt. Look it up”
 - Twitter API integration (get handle, followers, following, avatar).
 - Improved code-snippet entry functionality on posts.
 - Profile page styling.
+- Quotes - currently displaying quotes from ALL classes (not just current class).
 - Search bar and button styling (mobile-friendly - break to display:block).
 - All pages - avatars should be clickable links (eg on class index, to class; on class view, to user profile). 
 - Improved visual design and styling.
-- GAS logo/branding.
+- GAS logo/branding. (just GA logo, then "Student Blog"?).
 - Selective use of GA fonts (eg, nav bar only?)
 - Tag cloud & canned search.
 - Implementation of locations and streams models (and change root).
@@ -114,6 +115,5 @@ B: “Fuck, it’s on GAS, you shitcunt. Look it up”
 - Informative root page content (what is GAS, who is it for, etc).
 - Informative error messaging (w/ 'report' link to issues page in github repo)
 - New user - admin only?
-- 
 
 
