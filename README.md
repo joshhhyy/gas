@@ -94,6 +94,9 @@ B: “Fuck, it’s on GAS, you shitcunt. Look it up”
 - Slack API integration - use Ajax, not httparty (get username, avatar, teams, online status, slackbot DM).
 - Twitter API integration (get handle, followers, following, avatar).
 - Improved code-snippet entry functionality on posts.
+- Profile page styling.
+- Search bar and button styling (mobile-friendly - break to display:block).
+- All pages - avatars should be clickable links (eg on class index, to class; on class view, to user profile). 
 - Improved visual design and styling.
 - GAS logo/branding.
 - Selective use of GA fonts (eg, nav bar only?)
@@ -110,6 +113,7 @@ B: “Fuck, it’s on GAS, you shitcunt. Look it up”
   - Welcome email for new users.
 - Informative root page content (what is GAS, who is it for, etc).
 - Informative error messaging (w/ 'report' link to issues page in github repo)
-
+- New user - admin only?
+- 
 
 
