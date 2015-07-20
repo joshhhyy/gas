@@ -15,7 +15,7 @@ Users, when signing up, can provide their Github, Slack and LinkedIn usernames t
 
 A: “Oi, what’s your GitHub account, dude?”
 
-B: “Fuck, it’s on GAS, you shitcunt. Look it up”
+B: “Mate, why do you keep asking people that? It’s on GAS. Look it up”
 
 
 ###Who is it for?
