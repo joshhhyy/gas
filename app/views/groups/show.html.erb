@@ -27,9 +27,9 @@
     <div class="imageLinksGroup">
       
       <% if user.avatar == "" %>
-        <div class="thumbnailImage img-circle" style="background-image: url('/assets/avatar-default.png');" ></div>
+        <a href="<%= group_user_path(@group, user) %>"><div class="thumbnailImage img-circle" style="background-image: url('/assets/avatar-default.png');" ></div></a>
       <% else %>
-        <div class="thumbnailImage img-circle" style="background-image: url('<%= user.avatar %>')" ></div>
+        <a href="<%= group_user_path(@group, user) %>"><div class="thumbnailImage img-circle" style="background-image: url('<%= user.avatar %>')" ></div></a>
       <% end %>
       <h3><%= user.name.capitalize %> 
         <% if user.tagline %>
@@ -48,6 +48,7 @@
   <div class="quotes">
   <p class="right closeMe">Close</p>
     <h2> Quotes From This Class</h2><br>
+      <%  %>
       <% if @quotes == nil %>
         <p>No one has added any quotes yet. Be the first!! </p>
       <% else %>

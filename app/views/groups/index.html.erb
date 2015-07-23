@@ -7,9 +7,9 @@
   <div class="flexBox">
     <div class="imageLinksGroup">
       <% if group.avatar == nil %>
-        <div class="thumbnailImage img-circle" style="background-image: url('/assets/avatar-default.png')" ></div>
+        <a href="<%= group_path(group) %>"><div class="thumbnailImage img-circle" style="background-image: url('/assets/avatar-default.png')" ></div></a>
       <% else %>
-        <div class="thumbnailImage img-circle" style="background-image: url('<%= group.avatar %>')" ></div>
+        <a href="<%= group_path(group) %>"><div class="thumbnailImage img-circle" style="background-image: url('<%= group.avatar %>')" ></div></a>
       <% end %>
       <h3><%= link_to group.name, group_path(group) %>
         <% if group.instructor %>

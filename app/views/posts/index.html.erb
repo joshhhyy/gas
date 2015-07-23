@@ -19,7 +19,7 @@
           <p>Updated at: <%= post.updated_at.strftime "%b %e, %l:%M %p" %></p>
         <% end %>
       
-      <% if @current_user %>
+      <% if  @current_user.present? && @current_user.admin? %>
         <% if @current_user.id == @user.id %>
            <%= link_to 'Edit', edit_group_user_post_path(@group, @user, post) %>
            <%= link_to 'Destroy', [@group, @user, post], method: :delete, data: { confirm: 'Are you sure?' } %>

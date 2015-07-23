@@ -54,7 +54,7 @@ $(document).ready(function() {
 
 // Code for tag cloud (WIP)
   $(".groups.show").ready(function() {
-    console.log(gon.allTags);
+    // console.log(gon.allTags);
 
   })
 
