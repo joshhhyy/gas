@@ -37,7 +37,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find params[:id]
-    @post.content = @post.content.gsub('<br><br>&lt;pre&gt;&lt;code&gt;', '<pre><code>').gsub('&lt;/code&gt;&lt;/pre&gt;', '</pre></code>')
+    @post.content = @post.content.gsub('&lt;code&gt;', '<pre><code>').gsub('&lt;/code&gt;', '</pre></code>')
     gon.postContent = @post.content
     @comment = Comment.new
     @comments = @post.comments
