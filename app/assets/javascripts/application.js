@@ -29,9 +29,6 @@
 
 hljs.initHighlightingOnLoad();
 
-
-
-
 $(document).ready(function() {
 
 //Hide quotes display and new quote input on doc ready (because who needs backbone?)
@@ -83,7 +80,7 @@ $(document).ready(function() {
     var parseTextShow = function() {
       var parseMe = $(".parseMe");
       stringToParse = gon.postContent;
-      html = $.parseHTML(stringToParse)
+      html = $.parseHTML(stringToParse);
       $('.parseMe').append(html);
     }
     parseTextShow();
