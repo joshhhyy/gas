@@ -15,33 +15,45 @@
         <i><small>"<%= @user.tagline %>"</small></i> <br>
       <% end %>
     </h2>
-<%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> 
-| <%= link_to "View Group", group_path(@group) %> 
-<% if @user === @current_user %>
-  | <%= link_to 'Edit Profile', edit_group_user_path(@group, @user) %> 
-<% end %>
-<hr>
+    <%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> 
+    | <%= link_to "View Group", group_path(@group) %> 
+    <% if @user === @current_user %>
+      | <%= link_to 'Edit Profile', edit_group_user_path(@group, @user) %> 
+    <% end %>
+    <hr>
+  </div>
+
+</div>
+
+<div class="profileGroup">
+  <div class="profileBox">
+    <p>
+    <strong>Email:</strong>
+    <%=mail_to @user.email %>
+    </p>
+
+    <% if @user.linkedin_profile.present? %>
+      <p>
+        <strong>LinkedIn:</strong>
+        <a href="https://twitter.com/<%=@user.linkedin_profile %>" target="_blank">View profile</a>   
+      </p>
+    <% end %>
+    <% if @user.twitter_username.present? %>
+      <p>
+        <strong>Twitter:</strong>
+        <a href="https://twitter.com/<%=@user.twitter_username%>" target="_blank">View feed</a> 
+      </p>
+    <% end %>
+    <% if @user.last_active.present? %>
+      <p>
+        <strong>Last active:</strong>
+        <%= @user.last_active.strftime "%b %e, %l:%M %p" %>
+      </p>
+    <% end %>   
   </div>
 </div>
 
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<% if @user.linkedin_profile.present? %>
-  <p>
-    <strong>LinkedIn:</strong>
-    <%= link_to 'View Profile', @user.linkedin_profile %>  
-  </p>
-<% end %>
-<% if @user.last_active.present? %>
-  <p>
-    <strong>Last active:</strong>
-    <%= @user.last_active.strftime "%b %e, %l:%M %p" %>
-  </p>
-<% end %>
 
 
 <div class="socialGroup">
