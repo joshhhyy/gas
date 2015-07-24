@@ -271,6 +271,8 @@ nav {
 
 hr {
   border-color: lightgrey;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .brand {
@@ -438,7 +440,7 @@ h3 {
 }
 
 .fa {
-  font-size: 40px;
+  font-size: 36px;
 }
 
 .githubProfile a {
@@ -471,4 +473,24 @@ ul.dropdown-menu a:hover {
   width: 300px;
   position: fixed;
   top: 15px;
+}
+
+.socialGroup {
+  text-align: center;
+}
+
+.socialBox {
+  display: inline-block;
+  margin: 0 auto;  
+}
+
+.githubProfile {
+  text-align: left;
+}
+.repos {
+  text-align: left;
+}
+
+.commits {
+  text-align: left;
 }

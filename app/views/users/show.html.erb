@@ -45,30 +45,31 @@
 
 
 <div class="socialGroup">
-<% if @user.github_username.present? %>
-  <div class="github">
-    <div class="githubHeader"><i class="fa fa-github-square"></i>Github</div>
-    <hr>
-    <div class="githubBody">
-      <div class="githubProfile"></div>
-      <div class="repos"></div>
-      <div class="commits"></div>
+  <div class="socialBox"></div>
+  <% if @user.github_username.present? %>
+    <div class="github">
+      <div class="githubHeader"><i class="fa fa-github-square"></i> Github</div>
+      <hr>
+      <div class="githubBody">
+        <div class="githubProfile"></div>
+        <div class="repos"></div>
+        <div class="commits"></div>
+      </div>
+    </div>
+  <% end %>
+  <% if @user.slack_username.present? %>
+    <div class="slack">
+      <div class="slackHeader"><i class="fa fa-slack"></i> Slack</div><hr>
+      <div class="slackBody"><p>User is currently <b><%= slack %></b> on slack</p></div>
+      <hr>
+    <form>
+      <input type="text" name="message" placeholder="Say hi on Slack!" id="field">
+      <button id="submit">Submit</button>
+    </form>
+  <% end %>
+  <!-- Put Josh's code back here -->
     </div>
   </div>
-<% end %>
-<% if @user.slack_username.present? %>
-  <div class="slack">
-    <div class="slackHeader"><i class="fa fa-slack"></i>Slack</div><hr>
-    <div class="slackBody"><p>User is currently <b><%= slack %></b> on slack</p></div>
-    <hr>
-  <form>
-    <input type="text" name="message" placeholder="Say hi on Slack!" id="field">
-    <button id="submit">Submit</button>
-  </form>
-<% end %>
-<!-- Put Josh's code back here -->
-  </div>
-
 </div>
   
 

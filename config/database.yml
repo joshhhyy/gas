@@ -25,7 +25,7 @@ development:
   <<: *default
   database: gas_development
   host: localhost
-  username: alanwright
+  username: cjbarnaby
 
 
   # The specified database role being used to connect to postgres.
