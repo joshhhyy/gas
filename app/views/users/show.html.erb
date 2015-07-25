@@ -24,7 +24,7 @@
           <% if @user.linkedin_profile.present? %>
             <a href="https://<%=@user.linkedin_profile %>" target="_blank">View profile</a> 
           <% else %>
-            <i>User has not provided their LinkedIn details. It's almost like they don't even want a job.</i>
+            <i>User has not provided their LinkedIn details.</i>
           <% end %>
         </p>
 
@@ -33,7 +33,7 @@
            <% if @user.twitter_username.present? %>
             <a href="https://twitter.com/<%=@user.twitter_username%>" target="_blank">View feed</a>
           <% else %>
-            <i>User has not provided their Twitter handle. They probably have nothing interesting to say anyway</i>
+            <i>User has not provided their Twitter handle.</i>
           <% end %>
         </p>
 
@@ -44,7 +44,7 @@
           </p>
         <% end %>  
         <%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> 
-        | <%= link_to "View Group", group_path(@group) %> 
+        | <%= link_to "View Class", group_path(@group) %> 
         <% if @user === @current_user %>
           | <%= link_to 'Edit Profile', edit_group_user_path(@group, @user) %> 
         <% end %>

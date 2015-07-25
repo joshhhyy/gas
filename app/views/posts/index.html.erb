@@ -12,17 +12,17 @@
 
 
         <% if post.created_at == post.updated_at %>
-          <p>Created at: <%= post.created_at.strftime "%b %e, %l:%M %p" %></p>
+          <p>Created: <%= post.created_at.strftime "%b %e, %l:%M %p" %></p>
 
         <% else %>
-          <p>Created at: <%= post.created_at.strftime "%b %e, %l:%M %p" %></p>
-          <p>Updated at: <%= post.updated_at.strftime "%b %e, %l:%M %p" %></p>
+          <p>Created: <%= post.created_at.strftime "%b %e, %l:%M %p" %></p>
+          <p>Updated: <%= post.updated_at.strftime "%b %e, %l:%M %p" %></p>
         <% end %>
       
       <% if @current_user %>
         <% if @current_user.id == @user.id %>
-           <%= link_to 'Edit', edit_group_user_post_path(@group, @user, post) %>
-           <%= link_to 'Destroy', [@group, @user, post], method: :delete, data: { confirm: 'Are you sure?' } %>
+           <%= link_to 'Edit', edit_group_user_post_path(@group, @user, post) %> | 
+           <%= link_to 'Delete', [@group, @user, post], method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
       <% end %>
 

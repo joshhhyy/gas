@@ -15,22 +15,26 @@
     <%= f.label :title %><br>
     <%= f.text_field :title, :required => true %>
   </div>
+  <br>
   <div class="field">
     <%= f.label :subtitle %><br>
     <%= f.text_field :subtitle %>
   </div>
+  <br>
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content, :placeholder => "Include code as follows: '&lt;code&gt;[YOUR CODE HERE]&lt;/code&gt;' ", :size => "100x20", :required => true, class: "wysihtml5" %>
+  <p><i>Tip: To include code in your post, wrap it inside &lt;code&gt; &lt;/code&gt; tags. </i></p>
+    <%= f.text_area :content, :size => "100x20", :required => true, class: "wysihtml5" %>
   </div>
   <div class="field">
     <%= f.label :tags %><br>
     <%= f.text_field :tags %>
   </div>
+  <br>
   <div class="field">
       <%= f.label :Image %><br>
       <%= f.file_field :file %>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit :class => "btn btn-success" %>
   </div>
