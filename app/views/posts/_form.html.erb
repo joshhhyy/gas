@@ -1,3 +1,5 @@
+<div class="boxGroup">
+<div class="boxBox">
 <%= form_for([@group, @user, @post]) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -23,7 +25,7 @@
   <br>
   <div class="field">
   <p><i>Tip: To include code in your post, wrap it inside &lt;code&gt; &lt;/code&gt; tags. </i></p>
-    <%= f.text_area :content, :size => "100x20", :required => true, class: "wysihtml5" %>
+    <%= f.text_area :content, :id => "textBox", :required => true, class: "wysihtml5" %>
   </div>
   <div class="field">
     <%= f.label :tags %><br>
@@ -35,7 +37,12 @@
       <%= f.file_field :file %>
   </div>
   <br>
-  <div class="actions">
-    <%= f.submit :class => "btn btn-success" %>
+  <div class="actions pull-right">
+    <%= link_to 'Cancel', :back, :class => "btn btn-default" %> 
+    <%= f.submit :class => "btn btn-primary" %>
+
+
   </div>
 <% end %>
+</div>
+</div>

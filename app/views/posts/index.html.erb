@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @user.name %>'s Blog</h1>
+<h2 class="center"><%= @user.name %>'s Blog</h2>
 
   <% if @posts.any? %>
     <div class="boxGroup">
@@ -20,7 +20,11 @@
           </span>
           <h3><%= link_to post.title, [@group, @user, post] %> </h3>
           <h4><i><%= post.subtitle %></i></h4>
-          <p class="parseMe"><%= post.content.truncate(50) %> <%= link_to 'View post', [@group, @user, post] %></p>
+          <p class="parseMe">
+            <% if post.content %>
+              <%= post.content.truncate(50) %> <%= link_to 'View post', [@group, @user, post] %>
+            <% end %>
+          </p>
           <p>Tags: 
             <% if !post.tags.empty?  %>
               <%= post.tags %>
