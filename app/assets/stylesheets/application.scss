@@ -233,6 +233,15 @@ h3 {
   border: 1px black solid;
 }
 
+.profileImage {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-position: center center;
+  background-size: cover;
+  border: 1px black solid;
+}
+
 .largeImage {
   display: inline-block;
   width: 300px;
@@ -449,7 +458,7 @@ pre {
   /* User info box */
 
 .profileGroup {
-  text-align: center;
+  text-align: left;
   max-width: 712px;
   margin: 0 auto;
   margin-bottom: 5px;
@@ -465,6 +474,24 @@ pre {
   padding: 20px;  
   vertical-align: top;
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+.profileHeader {
+  font-size: 36px;
+  border: 1px black solid;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+}  
+
+.profileHeaderName{
+  text-align: left;
+  padding-left: 10px;
+}
+
+.profileDetails {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
 }
 
   /* Social group (github, slack) */ 
@@ -496,12 +523,6 @@ pre {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-.githubHeader {
-  font-size: 36px;
-  border: 1px black solid;
-  background-color: rgba(255, 255, 255, 0.5);
-}  
-
 .githubProfile {
   text-align: left;
 }
@@ -530,11 +551,5 @@ pre {
   margin: 5px;
   vertical-align: top;
   background-color: rgba(255, 255, 255, 0.4);
-}
-
-.slackHeader {
-  border: 1px black solid;
-  background-color: rgba(255, 255, 255, 0.5);
-  font-size: 36px;
 }
 
