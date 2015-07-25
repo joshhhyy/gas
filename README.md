@@ -1,5 +1,7 @@
 # Project 2: GA Student Blog ('GAS')
 
+[GAS on Heroku](https://gas-ga.herokuapp.com)
+
 ### Product Overview
 GAS is a site created with the intention of providing an easy, code-friendly blogging platform for GA students; linking their classmates and alumni in one blog to view each person's progress and experience throughout the course. 
 
@@ -13,7 +15,7 @@ Users, when signing up, can provide their Github, Slack and LinkedIn usernames t
 
 A: “Oi, what’s your GitHub account, dude?”
 
-B: “Fuck, it’s on GAS, you shitcunt. Look it up”
+B: “Mate, why do you keep asking people that? It’s on GAS. Look it up”
 
 
 ###Who is it for?
@@ -88,26 +90,35 @@ B: “Fuck, it’s on GAS, you shitcunt. Look it up”
 - Quotes:
   - Belongs to group 
 
+### Sprint 2 (for Meet & Greet)
+
+
+- *ALFIE -* Twitter API integration (get handle, followers, following, avatar).
+- *ALFIE -* Quotes - currently displaying quotes from ALL classes (not just current class).
+- *ALFIE -* All pages - avatars should be clickable links (eg on class index, to class; on class view, to user profile). 
+- *ALFIE -* Backbone implementation of quotes feature (to allow 'get another quote' without page reload).
+- *ALFIE -* Admin / routes - restict non-admin permissions (eg quotes index and show views, etc).
+- *ALFIE -* Additional mailers:
+  - Welcome email for new users.
+
+- *BADGER -* Improved code-snippet entry functionality on posts.
+- *BADGER -* Profile page styling.
+- *BADGER -* Informative root page content (what is GAS, who is it for, etc).
+- *BADGER -* Tag cloud & canned search.
+
+- *J-BON -* Selective use of GA fonts (eg, nav bar only?)
+- *J-BON -* Footer. 
+- *J-BON -* 'Last active' logic on user profile should use session date/time. Not working?
+- *J-BON -* Slack API integration - AJAX (get username, avatar, teams(?), online status, slackbot DM).
+
 ### Backlog
-- Slack API integration - use Ajax, not httparty (get username, avatar, teams, online status, slackbot DM).
-- Twitter API integration (get handle, followers, following, avatar).
-- Improved code-snippet entry functionality on posts.
-- Improved visual design and styling.
-- GAS logo/branding.
-- Selective use of GA fonts (eg, nav bar only?)
-- Tag cloud & canned search.
+
+- Informative error messaging (w/ 'report' link to issues page in github repo)
+- New user - admin only?
+- Search bar and button styling (mobile-friendly - break to display:block).
 - Implementation of locations and streams models (and change root).
 - Responsive design.
-- Backbone implementation of quotes feature (to allow 'get another quote' without page reload).
-- Footer. 
-- 'Last active' logic on user profile should use session date/time, not user object instance 'updated_at'.
-- Extend admin/restrict non-admin permissions:
-  - Quotes views - index and destroy (admin only).
-- Extend mailer: 
-  - Notify group admin of new users, new groups.
-  - Welcome email for new users.
-- Informative root page content (what is GAS, who is it for, etc).
-- Informative error messaging (w/ 'report' link to issues page in github repo)
-
+- Improved visual design and styling.
+- GAS logo/branding. (just GA logo, then "Student Blog"?).
 
 
