@@ -76,9 +76,22 @@ $(".users.show").ready(function() {
     })
   }
 
+  var getSlack = function() {
+    var slackUrl = 'https://slack.com/api/users.list?token=xoxp-3171645816-4432715041-6779629751-7f66f7&pretty=1'
+    var searchMembers = $.getJSON(slackUrl, {
+
+    }).done(function(results) {
+      console.log(results["members"])
+      for (var i = 0; i < results["members"].length; i++) {
+        
+      }
+    })
+  }
+
 
 
 
   // API FUNCTION CALLS
   getGithub();
+  // getSlack();
 });

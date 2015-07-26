@@ -9,6 +9,7 @@ module UsersHelper
         user_image = member['image_original']
       end
     end
+
     
     url = "https://slack.com/api/users.getPresence?token=xoxp-3171645816-4432715041-6779629751-7f66f7&user=#{@user_id}&pretty=1"
     user_info = HTTParty.get(url)
@@ -17,12 +18,11 @@ module UsersHelper
     return user_info['presence']
   end
 
-  def slackChat
-    # message = valueof field
+  def slack_chat
+    chat_message = params[message]
+    url = "https://slack.com/api/chat.postMessage?token=xoxp-3171645816-4432715041-6779629751-7f66f7&channel=#{@user_id}&text=#{chat_message}&pretty=1"
 
-    # url = "https://slack.com/api/chat.postMessage?token=xoxp-3171645816-4432715041-6779629751-7f66f7&channel=#{@user_id}&text=#{message}&pretty=1"
-
-    # return url
+    return url
 
   end
 end

@@ -29,6 +29,7 @@ class UsersController < ApplicationController
   def show
     @group = Group.find params[:group_id]
     gon.user = User.find(params[:id])
+
     # @post = Post.find params[:post_id]
   end
 
