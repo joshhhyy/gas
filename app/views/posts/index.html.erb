@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h2 class="center"><%= @user.name %>'s Blog</h2>
+<h2 class="center"><%= @user.name %>'s Blog 
+  <% if @current_user %>
+    <% if @current_user.id == @user.id %>
+      <%= link_to 'New Post', new_group_user_post_path, :class => "btn btn-primary" %>
+    <% end %>
+  <% end %>
+</h2>
 
   <% if @posts.any? %>
     <div class="boxGroup">
@@ -20,11 +26,13 @@
           </span>
           <h3><%= link_to post.title, [@group, @user, post] %> </h3>
           <h4><i><%= post.subtitle %></i></h4>
-          <p class="parseMe">
+          <br>
+          <p>
             <% if post.content %>
-              <%= post.content.truncate(50) %> <%= link_to 'View post', [@group, @user, post] %>
+              <%= post.content.truncate(50).html_safe %> <i><%= link_to '(View Post)', [@group, @user, post] %></i>
             <% end %>
           </p>
+          <br>
           <p>Tags: 
             <% if !post.tags.empty?  %>
               <%= post.tags %>
@@ -45,14 +53,9 @@
   <% else %>
     <h3>User has not made any posts.</h3>
   <% end %>
-
 <br>
 
-<% if @current_user %>
-  <% if @current_user.id == @user.id %>
-    <%= link_to 'New Post', new_group_user_post_path %> |
-  <% end %>
-<% end %>
-<%= link_to 'Back', [@group, @user] %>
+
+
 
 

@@ -45,10 +45,10 @@
         <% end %>  
         <%= link_to 'View Blog', group_user_posts_path(@group, @user, @post) %> 
         | <%= link_to "View Class", group_path(@group) %> 
-        <% if @user === @current_user %>
-          | <%= link_to 'Edit Profile', edit_group_user_path(@group, @user) %> 
-        <% end %>
       </div>
+              <% if @user === @current_user %>
+          <%= link_to 'Edit Profile', edit_group_user_path(@group, @user), :class => "btn btn-default pull-right" %>
+        <% end %>
     </div>
   </div>
 </div>

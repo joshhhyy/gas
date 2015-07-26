@@ -1,30 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
+<!-- This is the view for the 'users' search results. -->
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Avatar</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h2 class="center">Search Results - Users</h2>
+<div class="boxGroup">
+  <% @users.each do |user| %>
+    <div class="boxBox">
+      <span class="dropdown pull-right"> 
+        <a href="#" class="dropdown-toggle fa fa-bars" data-toggle="dropdown" role="button" aria-expanded="false"></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><%= link_to 'View Profile', group_user_path(User.find(user.id).group_id, User.find(user.id)) %></li>
+          <li><%= link_to 'View Blog', group_user_posts_path(User.find(user.id).group_id, User.find(user.id)) %></li>
+          <% if @current_user %>
+            <% if @current_user.id == user.id %>
+              <li><%= link_to 'Edit Profile', edit_group_user_path(User.find(user.id).group_id, User.find(user.id)) %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </span>
+      <h3>
+        <% if user.avatar == "" %>
+          <img src="/assets/avatar-default.png" class="miniAvatarImage img-rounded">
+        <% else %>
+          <img src=<%= user.avatar %> class="miniAvatarImage img-rounded">
+        <% end %>
+        <%= link_to user.name, group_user_path(User.find(user.id).group_id, User.find(user.id)) %> 
+        <small>(<%= link_to Group.find(user.group_id).name, group_path(Group.find(user.group_id).id)  %>)</small>
+      </h3> 
+    </div>  
+  <% end %>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %> | </td>
-        <td><%= user.email %> | </td> 
-        <td><% if user.avatar == "" %>
-              <img src="/assets/avatar-default.png">
-            <% else %>
-              <img src=<%= user.avatar %>>
-            <% end %> | </td>  
-        <td><%= link_to 'View Profile', group_user_path(User.find(user.id).group_id, User.find(user.id)) %> | </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+</div>

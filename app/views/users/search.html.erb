@@ -1,20 +1,58 @@
-<h1>Search Results</h1>
+<h2 class="center">Search Results - Posts</h2>
 
-<% @posts.each do |post| %>
-  <div class="postbox">
-  
-  
-  <h3><%= post.title.capitalize %> - <%= post.subtitle.capitalize %></h3>
-   <p>"<%= post.content.html_safe if post.content %>"</p>
-   <p>Tags: <%= post.tags %></p>
+<!-- This is the view for the 'posts' search results. Alfie, is this here because search is handled in the users ctrlr?) -->
 
-    <% if post.created_at == post.updated_at %>
-      <p>Created at: <%= post.created_at %></p>
+<div class="boxGroup"> 
+  <% @posts.each do |post| %>
+    <div class="boxBox">
+      <span class="dropdown pull-right"> 
+        <a href="#" class="dropdown-toggle fa fa-bars" data-toggle="dropdown" role="button" aria-expanded="false"></a>
+        <ul class="dropdown-menu" role="menu">
 
-    <% else %>
-      <p>Created at: <%= post.created_at %></p>
-      <p>Updated at: <%= post.updated_at %></p>
-    <% end %>
-    <%= link_to 'View post', group_user_post_path(User.find(post.user_id).group_id, User.find(post.user_id), post.id) %> 
-  </div>
-<% end %>  
+          <li><%= link_to 'View', group_user_post_path(User.find(post.user_id).group_id, User.find(post.user_id), post.id) %></li>
+          <% if @current_user %>
+            <% if @current_user == User.find(post.user_id) %>
+              <li><%= link_to 'Edit', edit_group_user_post_path(User.find(post.user_id).group_id, User.find(post.user_id), post.id) %></li>
+              <li><%= link_to 'Delete', group_user_post_path(User.find(post.user_id).group_id, User.find(post.user_id), post.id), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </span>    
+      <h3>
+
+        <% if User.find(post.user_id).avatar == "" %>
+          <img src="/assets/avatar-default.png" class="miniAvatarImage img-rounded">
+        <% else %>
+          <img src=<%= User.find(post.user_id).avatar %> class="miniAvatarImage img-rounded">
+        <% end %>
+
+      <%= link_to post.title, group_user_post_path(User.find(post.user_id).group_id, User.find(post.user_id), post.id) %> </h3>
+      <h4><i><%= post.subtitle %></i></h4>
+      <br>
+      <p>
+        <% if post.content %>
+          <%= post.content.truncate(50).html_safe %> <i><%= link_to '(View Post)', group_user_post_path(User.find(post.user_id).group_id, User.find(post.user_id), post.id) %></i>
+        <% end %>
+      </p>
+      <br>
+      <p>Tags: 
+        <% if !post.tags.empty?  %>
+          <%= post.tags %>
+        <% else %>
+          <i>None</i>
+        <% end %>
+      </p>
+
+        <% if post.created_at == post.updated_at %>
+          <p>Created: <%= post.created_at %></p>
+
+        <% else %>
+          <p>Created: <%= post.created_at %></p>
+          <p>Updated: <%= post.updated_at %></p>
+        <% end %>
+         
+    </div>
+
+  <% end %>
+
+</div>  

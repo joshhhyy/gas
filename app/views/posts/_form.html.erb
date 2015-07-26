@@ -1,48 +1,45 @@
 <div class="boxGroup">
-<div class="boxBox">
-<%= form_for([@group, @user, @post]) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+  <div class="boxBox">
+    <%= form_for([@group, @user, @post]) do |f| %>
+      <% if @post.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-      <ul>
-      <% @post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% @post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, :required => true %>
-  </div>
-  <br>
-  <div class="field">
-    <%= f.label :subtitle %><br>
-    <%= f.text_field :subtitle %>
-  </div>
-  <br>
-  <div class="field">
-  <p><i>Tip: To include code in your post, wrap it inside &lt;code&gt; &lt;/code&gt; tags. </i></p>
-    <%= f.text_area :content, :id => "textBox", :required => true, class: "wysihtml5" %>
-  </div>
-  <div class="field">
-    <%= f.label :tags %><br>
-    <%= f.text_field :tags %>
-  </div>
-  <br>
-  <div class="field">
-      <%= f.label :Image %><br>
-      <%= f.file_field :file %>
-  </div>
-  <br>
-  <div class="actions pull-right">
-    <%= link_to 'Cancel', :back, :class => "btn btn-default" %> 
-    <%= f.submit :class => "btn btn-primary" %>
+      <div class="field flex">
+        <%= f.label :title, :style => "width: 50px; text-align: right;" %>
+        <%= f.text_field :title, :style => "width: 500px;", :required => true %>
+      </div>
 
+      <div class="field flex">
+        <%= f.label :subtitle, :style => "width: 50px; text-align: right;"  %>
+        <%= f.text_field :subtitle, :style => "width: 500px;" %>
+      </div>
 
+      <div class="field">
+      <p><i>Tip: To include code in your post, wrap it inside &lt;code&gt; &lt;/code&gt; tags. </i></p>
+        <%= f.text_area :content, :id => "textBox", :required => true, class: "wysihtml5" %>
+      </div>
+      <div class="field flex">
+        <%= f.label :tags, :style => "width: 50px; text-align: right;"  %>
+        <%= f.text_field :tags, :style => "width: 500px;" %>
+      </div>
+
+      <div class="field flex">
+          <%= f.label :Image, :style => "width: 50px; text-align: right;"  %>
+          <%= f.file_field :file, :style => "width: 500px;" %>
+      </div>
+      <div class="actions pull-right">
+        <%= link_to 'Cancel', :back, :class => "btn btn-default" %> 
+        <%= f.submit :class => "btn btn-primary" %>
+      </div>
+    <% end %>
   </div>
-<% end %>
-</div>
 </div>

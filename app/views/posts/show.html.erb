@@ -38,7 +38,7 @@
       <p>
         <%= cl_image_tag(@post.cl_id) %>
       </p>
-      <hr>
+
     </div>
     <div class="comments">
       <h4> <%= 'Comments' %></h4>
@@ -50,11 +50,13 @@
         <% else %>
           <img src=<%= User.find(comment.user_id).avatar %> class="miniAvatarImage img-rounded">
         <% end %>
-        <span><%= User.find(comment.user_id).name %> </span>
+        <span><strong><%= User.find(comment.user_id).name %></strong> </span>
+
+        <span> <%= comment.created_at.strftime "%b %e, %l:%M %p" %> </span>
         <br>
         <br>
         <p> <%= comment.content %> </p>
-        <p> Created: <%= comment.created_at.strftime "%b %e, %l:%M %p" %> </p>
+        
         <hr>
       <% end %>
     </div>

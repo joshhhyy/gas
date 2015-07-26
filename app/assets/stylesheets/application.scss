@@ -297,6 +297,25 @@ nav .miniAvatarImage {
 
 // FLEXBOXES
 
+.flex {
+  display: flex;
+}
+
+.flex label {
+  flex-grow: 2;
+  padding-right: 5px;
+  margin: 10px;
+}
+
+.flex input {
+  flex-grow: 4;
+  margin: 10px;
+}
+
+.flex select {
+  flex-grow: 5.2;
+  margin: 10px;
+}
 .flexBox {
   display: flex;
 
@@ -461,7 +480,9 @@ ul.dropdown-menu a:hover {
   /* Posts show view */
 
 .post {
-  width: 70%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
 }
 
 pre {
@@ -474,8 +495,10 @@ pre {
 }
 
 .comments {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
 }
 
 #comment_content {
