@@ -376,7 +376,7 @@ nav {
    line-height: 92px;
 }
 
-.fuck {
+.ddm {
   text-align: center;
   right: -250px;
   top: -2px;
@@ -565,6 +565,16 @@ pre {
   font-size: 20px;
 }
 
+
+.classDropdown {
+  position: absolute;
+  right: 420px;
+  top: 15px;
+}
+
+ul.dropdown-menu {
+  text-align: center;
+
 .repos {
   text-align: left;
 }
@@ -585,6 +595,7 @@ pre {
   margin: 5px;
   vertical-align: top;
   background-color: rgba(255, 255, 255, 0.4);
+
 }
 
 .wysihtml5 {

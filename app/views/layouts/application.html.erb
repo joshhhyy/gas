@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="icon" type="image/png" href="assets/galogo.ico" />
  <title>Gas</title>
  <%= include_gon %>
  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -19,10 +20,9 @@
           Classes <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-        <!-- BACKLOG: Need to replace this with dynamic selector!! -->
-          <li><a href="/groups/1">WDI-9</a></li>
+          <li><a href="/groups/9">WDI-9</a></li>
           <hr>
-          <li><a href="/groups/2">WDI-10</a></li>
+          <li><a href="/groups/10">WDI-10</a></li>
         </ul>
       </div>
     </div>
@@ -32,7 +32,7 @@
           <%= text_field_tag :search, params[:search], value: params[:search], :class=>"form-control"%>
             <div class="input-group-btn">
               <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
-                <ul class="dropdown-menu dropdown-menu-right fuck">
+                <ul class="dropdown-menu dropdown-menu-right ddm">
                   <li><%= submit_tag "Find Post", :class => "btn btn-info" %> 
         <% end %>
                   </li> 

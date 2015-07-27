@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :edit, :update, :destroy]
-
+  before_action :check_if_admin, only: [:new, :create, :edit, :update]
   # GET /groups
   # GET /groups.json
   def index
@@ -12,9 +12,9 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find params[:id]
     @quote = Quote.new
-    @quotes = Quote.all.shuffle.first
+    @quotes = Quote.where("group_id = ?", @group.id).shuffle.first
+    # @quotes.find_by group_id: @group.id
     @users = @group.users
-    
     # Code for tag cloud - this next line is the best line of code in the history of everything.
     @all_tags = Post.all.pluck(:tags).reject(&:empty?).flatten.join(", ").split(", ")
     gon.allTags = @all_tags

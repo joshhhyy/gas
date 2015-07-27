@@ -13,10 +13,13 @@
 
   <div class="field">
     <%= f.label :quote, 'Add a quote from your class' %>
-    <br><br>
+    <br>
     <%= f.text_area :quote, :size => "80x10", :required => true %>
   </div>
-
+  <div class="field">
+    <%= f.label :group_id, 'Class' %>
+    <%= f.select :group_id, Group.all.map { |group| [group.name, group.id] }, :selected => "WDI-10" %>
+  </div>
   <div class="actions">
     <%= f.submit :class =>"btn btn-primary pull-right"%>
   </div>
