@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
-
+  before_action :check_if_admin, only: [:index, :destroy]
   # GET /quotes
   # GET /quotes.json
   def index
@@ -10,10 +10,12 @@ class QuotesController < ApplicationController
   # GET /quotes/1
   # GET /quotes/1.json
   def show
+
   end
 
   # GET /quotes/new
   def new
+    
     @quote = Quote.new
   end
 
@@ -24,11 +26,11 @@ class QuotesController < ApplicationController
   # POST /quotes
   # POST /quotes.json
   def create
+    
     @quote = Quote.new(quote_params)
-    @group = @current_user.group_id
     respond_to do |format|
       if @quote.save
-        format.html { redirect_to group_path(@group), notice: 'Quote was successfully created.' }
+        format.html { redirect_to :back, notice: 'Quote was successfully created.' }
         format.json { render :show, status: :created, location: @quote }
       else
         format.html { render :new }

@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @post.title %> - <%= @post.subtitle %></h1>
+<% if @current_user.present? && @current_user.id == @post.user_id %>
+  <%= link_to 'Edit Post', edit_group_user_post_path(@group, @user, @post) %> 
+<% end %>
 <div class="boxGroup">
   <div class="boxBox">
     <% if @current_user %>
