@@ -1,52 +1,70 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @post.title %> - <%= @post.subtitle %></h1>
-<%= link_to 'Edit Post', edit_group_user_post_path(@group, @user, @post) %> 
+<div class="boxGroup">
+  <div class="boxBox">
+    <% if @current_user %>
+      <% if @current_user.id == @user.id %>
+        <span class="dropdown pull-right"> 
+          <a href="#" class="dropdown-toggle fa fa-bars" data-toggle="dropdown" role="button" aria-expanded="false"></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to 'Edit', edit_group_user_post_path(@group, @user, @post) %></li>
+            <li><%= link_to 'Delete', [@group, @user, @post], method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          </ul>
+        </span> 
+      <% end %>
+    <% end %>
+    <h3><%= @post.title %></h3>
+    <h4><i><%= @post.subtitle %></i></h4>
+    <div class="post">
+      <p class="parseMe">
+      </p>
+      <hr>
+          <p><strong>Tags: </strong>
+            <% if !@post.tags.empty?  %>
+              <%= @post.tags %>
+            <% else %>
+              <i>None</i>
+            <% end %>
+          </p>
+      <hr>
+      <p>
+        <strong>Created at:</strong>
+        <%= @post.created_at.strftime "%b %e, %l:%M %p" %>
+      </p>
+      <p>
+        <strong>Updated at:</strong>
+        <%= @post.updated_at.strftime "%b %e, %l:%M %p" %>
+      </p>
+      <p>
+        <%= cl_image_tag(@post.cl_id) %>
+      </p>
 
-<div class="post">
+    </div>
+    <div class="comments">
+      <h4> <%= 'Comments' %></h4>
+      <br>
+      <% @comments.each do |comment| %>
+      
+        <% if @user.avatar == "" %>
+          <img src="/assets/avatar-default.png" class="miniAvatarImage img-rounded">
+        <% else %>
+          <img src=<%= User.find(comment.user_id).avatar %> class="miniAvatarImage img-rounded">
+        <% end %>
+        <span><strong><%= User.find(comment.user_id).name %></strong> </span>
 
-  <p class="parseMe">
-  </p>
-
-  <p>
-    <strong>Tags:</strong>
-    <%= @post.tags %>
-  </p>
-
-  <p>
-    <strong>Created at:</strong>
-    <%= @post.created_at.strftime "%b %e, %l:%M %p" %>
-  </p>
-
-  <p>
-    <strong>Updated at:</strong>
-    <%= @post.updated_at.strftime "%b %e, %l:%M %p" %>
-  </p>
-
-  <p>
-    <%= cl_image_tag(@post.cl_id) %>
-  </p>
-
-<hr>
+        <span> <%= comment.created_at.strftime "%b %e, %l:%M %p" %> </span>
+        <br>
+        <br>
+        <p> <%= comment.content %> </p>
+        
+        <hr>
+      <% end %>
+    </div>
+    <hr>
+    <div class="comment">
+      <%= render :partial => 'comments/form' %> 
+    </div>
+  </div>
 </div>
 
-<div class="comments">
-  <strong> <%= 'Comments' %></strong><br>
-  <% @comments.each do |comment| %>
-  
-  <% if @user.avatar == "" %>
-    <img src="/assets/avatar-default.png" class="commentAvatar">
-  <% else %>
-    <img src=<%= User.find(comment.user_id).avatar %> class="commentAvatar">
-  <% end %>
-     <p><%= User.find(comment.user_id).name %> <%= comment.title %> </p>
-      <%= comment.content %> 
-     <p> <%= comment.created_at.strftime "%b %e, %l:%M %p" %> </p>
-    <br>
-  <% end %>
-</div>
-<hr>
-<div class="comment">
-  <%= render :partial => 'comments/form' %> 
-</div>
 

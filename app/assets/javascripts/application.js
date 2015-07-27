@@ -29,9 +29,6 @@
 
 hljs.initHighlightingOnLoad();
 
-
-
-
 $(document).ready(function() {
 
 //Hide quotes display and new quote input on doc ready (because who needs backbone?)
@@ -44,8 +41,7 @@ $(document).ready(function() {
         "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
         "emphasis": true, //Italics, bold, etc. Default true
         "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
-        "html": true, //Button which allows you to edit the generated HTML. Default false
-        "link": true, //Button to insert a link. Default true
+        "link": false, //Button to insert a link. Default true
         "image": false, //Button to insert an image. Default true,
         "color": true, //Button to change color of font  
         "blockquote": false, //Blockquote  
@@ -83,7 +79,7 @@ $(document).ready(function() {
     var parseTextShow = function() {
       var parseMe = $(".parseMe");
       stringToParse = gon.postContent;
-      html = $.parseHTML(stringToParse)
+      html = $.parseHTML(stringToParse);
       $('.parseMe').append(html);
     }
     parseTextShow();
